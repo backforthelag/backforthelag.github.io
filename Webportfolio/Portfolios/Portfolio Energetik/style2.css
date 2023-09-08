@@ -1,0 +1,244 @@
+#top {
+    text-align: center;}
+
+#logo {
+    color: white;
+    background-color:rgb(0, 255, 64);
+    animation-name: example;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+    display:inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 6px;
+}  
+@keyframes example {
+    from {background-color: rgba(255, 128, 0, 0.627);}
+    to {background-color: rgb(0, 238, 255);}
+  }  
+
+#logo-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px;
+    color: rgb(0, 0, 0);
+}
+#navigation a {
+    color:gray;
+    padding: 8px;
+}
+
+#navigation a:hover {
+    color:rgb(243, 244, 246) ;
+}
+
+#main {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+#Texte {
+    text-align: justify;
+     margin: 25px;  
+     color: rgb(212, 221, 221);
+     font-size: large;
+}
+
+#TexteReflexionen {
+    text-align: justify;
+    margin: 25px;  
+    color: rgb(0, 0, 0);
+    font-size: large;
+
+
+}
+    
+#Teilüberschriftenlinks {
+    text-align: left;
+    font-size: larger;
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-bottom: -10px;
+}
+
+#Teilüberschriftenlinksklein {
+    text-align: left;
+    font-size: large;
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-bottom: -10px;
+}
+
+#Teilüberschriften {
+    text-align: center;
+    font-size: x-large;
+    padding-left: 30px;
+    padding-top: 25px;
+    padding-bottom: -10px;
+    margin-bottom: 15px;    
+}
+
+#besondereteilüberschriften {
+    text-align: left;
+      font-size: larger;
+      padding-left: 30px;
+      padding-top: 25px;
+      padding-bottom: -10px;
+      color: white;
+      text-shadow: 1px 1px 2px black, 0 0 25px rgb(102, 102, 211), 0 0 5px rgb(13, 13, 234);
+  }
+  
+  
+  #Formeln {
+      font-style: italic;
+      font-size: xx-large;
+  }
+  
+  #image img {
+    width: 75%;
+    margin-top: 40px;
+    border-radius: 8px;
+    padding-top: 20px;
+  }
+  
+  
+  #image img:hover {
+      opacity: 1.0;
+      }
+  
+      #Formeln {
+          font-style: italic;
+          font-size: x-large;
+      }
+      
+      ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: rgb(8, 8, 8);
+          
+        }
+        
+        li {
+          float: left;
+          padding-right: 30px;
+        }
+        
+        li a, .dropbtn {
+          display: block;
+          color: darkgreen;
+          text-align: center;
+          padding: 14px 16px;
+          
+          text-decoration: none;
+        }
+        
+        li a:hover, .dropdown:hover .dropbtn {
+          background-color: black;
+        }
+      
+        li.dropdown {
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: black;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+        
+        .dropdown-content a:hover 
+        {background-color: #0f0e0e;}
+        
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+      
+        .active {
+          background-color: #4CAF50;
+        }
+      
+        #Leiste {
+          position: fixed;
+          width: 680px;
+      }
+  
+      body {
+          background-image: url(image2.jpg); 
+          background-attachment: fixed;
+          
+          }
+  
+      #notes {
+        text-align: left;
+      }
+
+      header {
+        background-color: #109595;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      
+      
+      nav {
+        float: left;
+        width: 30%;
+        padding: 20px;
+      }
+      
+      
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      article {
+        float: left;
+        padding: 20px;
+        width: 60%;
+        
+         
+      }
+      
+      
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      
+      footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+      }
+      
+      
+      @media (max-width: 600px) {
+        nav, article {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      
+      

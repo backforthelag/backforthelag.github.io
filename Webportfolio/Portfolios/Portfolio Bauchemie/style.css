@@ -1,0 +1,64 @@
+#top {
+    text-align: center;}
+
+#logo {
+    color: white;
+    background-color:rgb(0, 255, 64);
+    animation-name: example;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+    display:inline-block;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 6px;
+}  
+@keyframes example {
+    from {background-color: rgb(0, 255, 0);}
+    to {background-color: rgb(0, 238, 255);}
+  }  
+
+#logo-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 16px;
+}
+#navigation a {
+    color:black ;
+    padding: 8px;
+}
+
+#navigation a:hover {
+    color:rgb(23, 230, 37) ;
+}
+
+#image img {
+    width: 75%;
+    margin-top: 15px;
+}
+
+#main {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+#Texte {
+    text-align: justify;
+     margin: 35px;  
+}
+    
+#Teilüberschriften {
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: -10px;
+}
+
+#Formeln {
+    font-style: italic;
+    font-size: xx-large;
+}
+
+

@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <title> Chemie Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="device-widht, intial-scale=1">
+</head>
+
+<body>
+<div  id="top">
+    <div id="logo">HB</div>
+    <div id="logo-name"> Portfolio Hannes Bluhm</div>
+    <div id="navigation">
+        <a href="#Protokolle">Protokolle</a>
+        <a href="#Reflexionen">Reflexionen</a>
+      </div>
+
+<div id="image">
+    <img src="image.jpg" alt="">
+</div>
+<div id="main">
+    <section id="Protokolle">
+        <h2>Protokolle </h2>
+        <a href="file:///D:/Schule/Chemie/Protokoll/Protokoll,%20Herstellung%20von%20Seife.pdf">Herstellung von Seife</a> </section>
+        <section class="Reflexionen">
+          <div id="Reflexionen">
+          <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+      
+        <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+        <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+        <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+          <!-- this canvas is later used to draw the chart, 
+                if you want to draw several seperate charts you have to pay attention to the IDs -->
+          <!-- in diesem canvas wird das Digramm gezeichnet
+                wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+          <canvas id="evaluation_04" style="border:1px solid"></canvas>
+        </div>
+      
+        <script>
+          var canvasId = "evaluation_04";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+          var chartTitle = "Kapitel 1";  // change accordingly
+          var dataSetValues = [10, 14, 12, 14, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+      
+            // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+          dataSetValues.forEach(function(item) {
+              if (item < 0 || item > 15) {
+                console.log(item);
+                alert("Notenwert falsch: " + item + "!");
+                dataSetValues = [0,0,0,0,0];
+              };
+            }
+          );
+      
+          var chartCanvas = document.getElementById(canvasId);  // don't change this
+          var chartData = {
+            labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+            datasets: [
+              {
+              label: chartTitle,  // keep this
+              backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+              data: dataSetValues  // keep this
+              }, 
+            ]
+          };
+      
+          var radarChart = new Chart(chartCanvas, {
+            type: 'radar',  // keep this
+            data: chartData,
+            options: {
+                layout: {
+                  padding: 10
+                },
+                title: {
+                    display: true,
+                    text: 'Reflexion Herstellung von Seife'  // change this title as you like it
+                },
+                scale: {
+                    angleLines: {
+                        display: true
+                    },
+                    ticks: {
+                        min: 0,
+                        max: 15,
+                        stepSize: 2,
+                    }
+                },
+                responsive: true,  // keep this
+                maintainAspectRatio: false  // keep this
+            }
+          });
+        </script>
+        </class>
+        <p>Bei dem Experiment Herstellung von Seife, habe ich in einer Gruppe gearbeitet. Deshalb habe ich nicht viel alleine gearbeitet. Jeder in der Gruppe hatte verschiedene Aufgaben, wie zum Beispiel die Beobachtungen aufschreiben oder das Experiment durchführen. Wir haben zeitlich alles geschaft und auf soweit alles verstanden. Bei der Effizienz können wir es beim nächsten mal noch besser planen und dann auch hoffentlich effizienter arbeiten. </p>
+
+          <h3 class="ueberschriften">Die Waschwirkung von Seife</h3>
+        <h4>Auftrag: Die Waschwirkung von Seife, soll mithilfe des Experimentes erklärt werden.  </h4>
+        <h4> Materialiste:</h4>
+        <table border="3" style="width: 100%;">
+          <tr> 
+            <td><b>Geräte</b></td>
+            <td><b>Chemikalien</b></td>
+            <td><b>Ph-Werte</b></td>
+          </tr>
+          <tr>
+            <td>Reagenzglas</td>
+            <td>Olivenöl Seifenlauge</td>
+          </tr>
+          <td></td>
+          <td>Wasser</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Seifenlauge</td>
+          </table>
+  <h4>Durchführung:</h4>
+  <p>Füllen sie ein Reagenzglas mit ca. 3ml Wasser und 0,5ml Olivenöl. Schütteln Sie das Reagenzglas 
+    vorsichtig. Bestimmen Sie die ungefähre Zeitspanne bis zur Entmischung. Wiederholen Sie den Versuch 
+    mit einer Seifenlösung anstatt reinem Wasser.</p>
+  <h4>Beobachtungen</h4>
+  <table border="3" style="width: 100%">
+    <tr>
+      <td>Olivenöl in Wasser</td>
+      <td>Olivenöl in Seifenlauge</td>
+    </tr>
+    <tr>
+      <td>Das Olivenöl bleibt an der Oberfläche und 
+        vermischt sich nicht mit dem Wasser</td>
+      <td>Olivenöl und die Seifenlauge werden zu einem 
+        trüben Gemisch</td>
+    </tr>
+  </table>
+  <h4>Auswertung:</h4>
+  <p>Bei dem Versuch Olivenöl in Wasser blieb das Olivenöl an der Oberfläche. Das Olivenöl vermischt sich 
+    nicht mit dem Wasser, weil es polar ist und Olivenöl unpolar ist. Bei dem Versuch Olivenöl in Seifenlauge 
+    bilden sich Micellen. In deren Mitte das Olivenöl ist und darum die Seifen-Anoinen, bei den der unpolare 
+    Teil in das innere der Micelle zeigt. Der polare Teil der Seifen-Anionen zeigt nach außen, weil die 
+    Seifenlauge auch polar ist.</p>
+    
+    <section class="Reflexionen">
+        <h3>Reflexion</h3>
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_01" style="border:1px solid"></canvas>
+      </div>
+
+      <script>
+        var canvasId = "evaluation_01";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Kapitel 1";  // change accordingly
+        var dataSetValues = [15, 12, 12, 12, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Reflexion Waschwirkung von Seife'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+        <p>Bei dem Kaiptel "Waschwirkung von Seife, habe ich alles sehr gut verstanden und das auch sehr schnell. Ich habe in einer Gruppe gearbeitet und dort haben wir uns auch verständigt über das Thema. Die Zeit habe ich versucht so gut es geht zu nutzen und habe dabei Effizient gearbeitet. Dennoch könnte ich mich beim nächsten mal etwas effiezienter arbeiten in der gleichen Zeit.  </p>
+         </section>
+         <hr>
+<h3>Lösemittel zum Säubern</h3>
+<h4>Auftrag:Vergleichen Sie Wasser und Waschbenzin! Nutzen Sie dazu die folgenden Kriterien in 
+  dieser Reihenfolge.
+  </h4>
+  <table border="3" style="width: 100%;">
+    <td></td>
+    
+    <td>Struktur</td>
+    <td>Kräfte</td>
+    <td>Eigenschaften</td>
+  
+    <tr>
+      <td>Wasser</td>
+      <td>besteht aus 1 
+        Wasserstoff-Atom und 
+        2 Sauerstoff-Atomen</td>
+        <td>wegen dem 
+          Wasserstoffmolekül 
+          herrschen 
+          Wasserstoffbrückenver
+          bindungen </td>
+          <td>Siedetemperatur: 
+            100C° 
+            Schmelztemperatur: 
+            0C° 
+            Polar wegen den 
+            Wasserstoff-Atomen</td>
+    </tr>
+    <tr>
+      <td>Oktan</td>
+      <td>Besteht aus 8 
+        Kohlenstoff-Atomen 
+        und 18 WasserstoffAtomen </td>
+        <td>durch die KohlenstoffAtome herrschen die 
+          VdW-Kräfte</td>
+          <td>Siedetemperatur:
+            126C°
+            Schmelztemperatur: -
+            56.8C° 
+            Unpolar wegen den 
+            vielen KohlenstoffAtomen</td> </tr>
+  </table>
+  <h3>Reflexion</h3>
+  <section class="Reflexionen">
+    <div id="Reflexionen">
+    <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+  <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+  <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+  <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+    <!-- this canvas is later used to draw the chart, 
+          if you want to draw several seperate charts you have to pay attention to the IDs -->
+    <!-- in diesem canvas wird das Digramm gezeichnet
+          wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+    <canvas id="evaluation_02" style="border:1px solid"></canvas>
+  </div>
+
+  <script>
+    var canvasId = "evaluation_02";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+    var chartTitle = "Kapitel 1";  // change accordingly
+    var dataSetValues = [15, 8, 15, 15, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+      // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+    dataSetValues.forEach(function(item) {
+        if (item < 0 || item > 15) {
+          console.log(item);
+          alert("Notenwert falsch: " + item + "!");
+          dataSetValues = [0,0,0,0,0];
+        };
+      }
+    );
+
+    var chartCanvas = document.getElementById(canvasId);  // don't change this
+    var chartData = {
+      labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+      datasets: [
+        {
+        label: chartTitle,  // keep this
+        backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+        data: dataSetValues  // keep this
+        }, 
+      ]
+    };
+
+    var radarChart = new Chart(chartCanvas, {
+      type: 'radar',  // keep this
+      data: chartData,
+      options: {
+          layout: {
+            padding: 10
+          },
+          title: {
+              display: true,
+              text: 'Reflexion Lösemittel zum Säubern'  // change this title as you like it
+          },
+          scale: {
+              angleLines: {
+                  display: true
+              },
+              ticks: {
+                  min: 0,
+                  max: 15,
+                  stepSize: 2,
+              }
+          },
+          responsive: true,  // keep this
+          maintainAspectRatio: false  // keep this
+      }
+    });
+  </script>
+  </class>
+  <p>Bei diesem Kapitel habe ich eher weniger mit meiner Gruppe gearbeitet, weil es ein sehr kurzes Thema ist welches nicht viel Zeit benötigt. Deshalb habe ich die Aufgaben auch sehr schnell geschafft und diese auch sehr gut verstanden.</p>
+<hr>
+
+<h3>Protokoll:Waschwirkung von Seife</h3>
+<h4>Auftrag:Die Waschwirkung von Seife, soll mithilfe des Experimentes erklärt werden.</h4>
+<h4>Materialliste:</h4>
+<table border="3" style="width: 100%;">
+<td>Geräte</td>
+<td>Chemikalien</td>
+<td>GHS-Symbole</td>
+<tr>
+  <td>Regenzglas</td>
+  <td>Olivenöl</td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td>Wasser</td>
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td>Seifenlauge</td>
+  <td></td>
+</tr>
+</table>
+<h4>Durchführung:</h4>
+<p>Füllen sie ein Reagenzglas mit ca. 3ml Wasser und 0,5ml Olivenöl. Schütteln Sie das Reagenzglas 
+  vorsichtig. Bestimmen Sie die ungefähre Zeitspanne bis zur Entmischung. Wiederholen Sie den Versuch 
+  mit einer Seifenlösung anstatt reinem Wasser</p>
+  <h4>Beobachtungen</h4>
+  <table border="3" style="width: 100%;">
+    <td>Olivenöl in Wasser</td>
+    <td>Olivenöl in Seifenlauge</td>
+    <tr>
+      <td>Das Olivenöl bleibt an der Oberfläche und 
+        vermischt sich nicht mit dem Wasser</td>
+        <td>Olivenöl und die Seifenlauge werden zu einem 
+          trüben Gemisch</td>
+    </tr>
+    </table>
+    <h4>Auswertung</h4>
+    <p>Bei dem Versuch Olivenöl in Wasser blieb das Olivenöl an der Oberfläche. Das Olivenöl vermischt sich 
+      nicht mit dem Wasser, weil es polar ist und Olivenöl unpolar ist. Bei dem Versuch Olivenöl in Seifenlauge 
+      bilden sich Micellen. In deren Mitte das Olivenöl ist und darum die Seifen-Anoinen, bei den der unpolare 
+      Teil in das innere der Micelle zeigt. Der polare Teil der Seifen-Anionen zeigt nach außen, weil die 
+      Seifenlauge auch polar ist.</p>
+      <h3>Reflexion</h3>
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_03" style="border:1px solid"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_03";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Kapitel 1";  // change accordingly
+        var dataSetValues = [10, 15, 15, 15, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Reflexion Waschwirkung von Seife'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+      <p>Bei dem Experiment habe ich in einer Gruppe gearbeitet, weshalb meine Einzelarbeit so niedrig ist. Jeder hatte in der Gruppe verschiedene Aufgaben und deswegen wurden die Ergebniss am Ende ausgetauscht. Wir haben effizient gearbeitet und in der Vorgegebenen Zeit alles geschaft. Beim nächsten mal, könnten wir ein bisschen koordinierter arbeiten.</p>
+<hr>
+<h3>Fette und Öle</h3>
+<h4>Auftrag:: Erläutern Sie die unterschiedlichen Eigenschaften von Fetten und Ölen in Bezug auf ihren 
+  Siedepunkt ( oder: Warum ist Öl bei RT flüssig und Butter fest?)!</h4>
+  <p>Fette: Bestehen aus jeweils drei Fettsäuren und Glycerin und werden daher auch Triacylglyzeride 
+    genannt. Sie können Doppelbindungen (ungesättigte Fettsäuren) enthalten.</p>
+    <p>Öle: Sind von dem Aufbau her sehr ähnlich zu der Struktur der Fette, bestehen auch aus Glycerin und 
+      Fettsäuren, diese besitzen mindestens 1 Doppelbindung. </p>
+      <h4>Fettsäuren:</h4>
+      <p>Undecylensäure</p>
+      <div id="image2">
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Undecylenic_acid_Structural_Formulae_V.1.svg/2880px-Undecylenic_acid_Structural_Formulae_V.1.svg.png"><img src="image2.png" alt=""></a>
+    </div>
+    <p>Palmitoleinsäure</p>
+    <div id="image3">
+      <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Palmitoleic_acid_Structural_Formula_V1.svg/2880px-Palmitoleic_acid_Structural_Formula_V1.svg.png"><img src="image3.png" alt=""></a>
+</div>
+<h4>Doppelbindungen:</h4>
+<p>Durch die Doppelbindungen ist das Molekül sperriger und die Abstände zwischen den Molekülen sind 
+  größer, was dazu führt das die VdW-Kräfte schwächer sind. Dadurch benötigt man dann, weniger Energie 
+  um diese zu trennen. Je mehr Doppelbindungen desto weniger Energie wird benötigt.</p>
+<h3>Reflexion</h3>
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_05" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_05";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [10, 15, 15, 15, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion Fette und Öle'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+<p>In diesem Kapitel ging es um Fette und öle, und deren Struktur. Anfangs dachte ich das diese sehr komplex sind, doch es stellte sich schnell heraus,dass es eigentlich sehr einfach ist. Das Thema habe ich verstanden und die Zeit auch effektiv genutzt. Auch bei diesem Kapitel habe ich zudem auch in einer Gruppe gearbeitet, jedoch auch in Einzelarbeit.
+  ps. Die Bildquellen sehen sie, wenn sie auf das Bild klicken :)  </p>
+<hr>
+<h3>Protokoll:Nachweis von Doppelbindungen in Fetten und Ölen</h3>
+<h4>Auftrag: Weisen Sie experimentell die Doppelbindungen in Fetten und Ölen nach!</h4>
+<h4>Materialliste:</h4>
+<table border="3" style="width: 100%;">
+  <td>Geräte</td>
+  <td>Chemikalien</td>
+  <td>GHS-Symbole</td>
+  <tr>
+    <td>Herdplatte</td>
+    <td>Kokosfett/Palmin</td>
+  </tr>
+  <tr>
+    <td>2Reagenzgläser</td>
+    <td>Olivenöl</td>
+  </tr>
+  <tr>
+    <td>Pipette</td>
+    <td>Wasser</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Betaisodona-Lösung (verdünnt 1:2)</td>
+  </tr>
+  </table>
+  <h4>Durchführung:</h4>
+  <p>Verdünnen Sie die Betaisodona-Lösung noch einmal im Verhältnis 1:2. Danach werden in 
+    zwei Reagenzgläsern die gleichen Mengen ( sparsam arbeiten) von Öl und Palmin gegeben. Das 
+    Reagenzglas mit Palmin wird in ein Wasserbad mit kochendem Wasser gestellt, damit sich das Fett 
+    verflüssigt. Nun wird zu beiden Fettproben tropfenweise die verdünnte Iod-Lösung zugegeben. Nach 
+    jeder Zugabe werden die Reagenzgläser verschlossen und kräftig geschüttelt</p>
+    <h4>Beobachtung:</h4>
+    <table border="3" style="width: 100%;">
+    <td>Reagenzglas</td>
+    <td>Beobachtungen</td>
+    <tr>
+      <td>1.</td>
+      <td>Kokosfett ist bei Zimmertemperatur fest und 
+        weiß gefärbt, wird nach einiger Zeit flüssig und 
+        nach Zugabe von Iod-Lösung gelblich</td>
+    </tr>
+    <tr>
+      <td>2.</td>
+      <td>Olivenöl ist bei Zimmertemperatur flüssig und 
+        gelblich gefärbt, nach Zugabe von Iod-Lösung 
+        färbt sich bräunlich</td>
+    </tr>
+    </table>
+    <p>1.Reagenzglas: Kokosfett/Palmin</p>
+    <p>2.Reagenzglas: Olivenöl</p>
+    <h4>Auswertung:</h4>
+    <p>Bei der Reaktion der Betaisodona-Lösung mit dem Olivenöl färbt sich das Gemisch bräunlich, weil das 
+      Iod aus der Betaisodona-Lösung mit den Doppelbindungen des Olivenöls reagiert und diese auflöst. Das 
+      Iod ist dann nicht mehr vorhanden und deshalb färbt sich das Gemisch.</p>
+      <p>Bei der Reaktion von Kokosfett und der Betaisodona-Lösung färbt sich das gemisch nur leicht, weil in 
+        Kokosfett eher ungesättigte Fette vorhanden sind. Das Iod aus der Betaisodona-Lösung kann mit keiner 
+        Doppelbindung reagieren, weshalb sich das Gemisch nicht färbt.</p>
+        <p>Bei diesen Reaktionen nennt man Additionsreaktionen, weil bei den Reaktionen 2 Stoffe zusammengefügt 
+          werden und eine Mehrfachbindung aufgespalten wird. Dadurch das nicht an jedem Kohlenstoff-Atom die 
+          Maximale Anzahl an Wasserstoff-Atomen ist. Durch die Hydrierung wird die ungesättigte-Doppelbindung 
+          dann aufgespalten. 
+          Als Beispiel, die Additionsreaktion von dem Alkin 2-Butin mit Wasser. 
+          Bei dieser Reaktion lässt sich zeigen das durch die Hydrierung, also zufuhr von einem Wasserstoff-Atom 
+          die Doppelbindung von 2-Butin aufgespalten wird und sich dann 2-Butan bildet, ein Alken. Durch die 
+          Additionsreaktion wird die Doppelbindungen aufgelöst indem sich Wasserstoff-Atome dort anlagern.</p>
+          <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Addition_2-Butin_Wasserstoff.svg/2880px-Addition_2-Butin_Wasserstoff.svg.png"><img src="image2.png" alt=""></a>
+          <p>Warum sind gesättigte Fettsäuren wichtiger für die Ernährung? 
+            Im Genaueren unterscheiden man auch noch zwischen einfach und mehrwachungesättigten Fettsäuren. 
+            einfach ungesättigte Fettsäuren habe eine Doppelbindung und mehrfach ungesättigte Fettsäuren haben 2 
+            oder mehr Doppelbindungen. Darüber hinaus spielt auch die Position der Doppelbindung eine wichtige 
+            Rolle, über diese lässt sich ermitteln ob es eine Omega 3 oder 6 Fettsäure sind. Ungesättigte Fettsäuren 
+            sorgen dafür das die Zellmembran auch weiter hin durchlässig und beweglich bleiben. Sie werden auch 
+            für die Herstellung von Hormonen benötigt und unterstützen die Zellteilung. Der HKS (Herz-KreislaufSystem)profitiert auch von den ungesättigten Fettsäuren, weil durch diese das schlechte LDL-Cholisterin 
+            im Blut sinkt und das gut LDL-Cholisterin ansteigt.</p>
+            <h3>Reflexion</h3>
+            <section class="Reflexionen">
+              <div id="Reflexionen">
+              <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+            
+            <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+            <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+            <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+              <!-- this canvas is later used to draw the chart, 
+                    if you want to draw several seperate charts you have to pay attention to the IDs -->
+              <!-- in diesem canvas wird das Digramm gezeichnet
+                    wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+              <canvas id="evaluation_06" style="border:1px solid"></canvas>
+            </div>
+            
+            <script>
+              var canvasId = "evaluation_06";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+              var chartTitle = "Kapitel 1";  // change accordingly
+              var dataSetValues = [10, 15, 15, 15, 12];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+            
+                // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+              dataSetValues.forEach(function(item) {
+                  if (item < 0 || item > 15) {
+                    console.log(item);
+                    alert("Notenwert falsch: " + item + "!");
+                    dataSetValues = [0,0,0,0,0];
+                  };
+                }
+              );
+            
+              var chartCanvas = document.getElementById(canvasId);  // don't change this
+              var chartData = {
+                labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+                datasets: [
+                  {
+                  label: chartTitle,  // keep this
+                  backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+                  data: dataSetValues  // keep this
+                  }, 
+                ]
+              };
+            
+              var radarChart = new Chart(chartCanvas, {
+                type: 'radar',  // keep this
+                data: chartData,
+                options: {
+                    layout: {
+                      padding: 10
+                    },
+                    title: {
+                        display: true,
+                        text: 'Reflexion Nachweis von Doppelbindungen'  // change this title as you like it
+                    },
+                    scale: {
+                        angleLines: {
+                            display: true
+                        },
+                        ticks: {
+                            min: 0,
+                            max: 15,
+                            stepSize: 2,
+                        }
+                    },
+                    responsive: true,  // keep this
+                    maintainAspectRatio: false  // keep this
+                }
+              });
+            </script>
+            </class>
+            <p>Bei dem Experiment, Nachweis von Doppelbindungen in Fetten und Ölen haben wir wieder in Gruppen gearbeitet und deshalb eher weniger in Einzelarbeit. Bei dem Verständnis habe ich mir nur 12 Punkte gegeben, weil ich das Thema erst nicht komplett verstanden habe und Viele das Experiment mit Bromwasser gemacht hatten, hat es zusätzlich nochmal länger gedaurt. Jetzt weiß ich das,dass Experiment damit sehr ähnlich abläuft. Nachdem ich auch nochmal bei meiner Lehrkraft nachgefragt hatte, habe ich das Thema dann auch komplett verstanden. Beim nächsten mal sollte ich die Aufgabenstellung besser lesen, denn in dieser stand das ich keine "ausführliche Auswertung" schreiben muss. ps. auch diesmal Bildquelle im Bild :)</p>
+            <hr>
+            <h3>Die Fetthärtung</h3>
+            <h4>Erklärung des Begriffs Hydrierung:</h4>
+            <p>Bei der Hydrierung handelt es sich um eine chemische Reaktion bei der Wasserstoff-Atome (Wasser) zu einem anderen Stoff hinzugefügt wird. Dies geschieht meist mit der Hilfe eines Katalysators. Dadurch kann es auch zu einer Doppelhydrierung kommen. Meist dient Nickel,Palladium als Katalysator. Meist wird bei chemischen Reaktionen wie dem Additionsverfahren mithilfe der Hydrierung eine Doppelbindung aufgespalten, weil die zugeführten Wasserstoffatome sich in diese einlagern. Dieser Vorgang ist auf dem folgenden Bild zu erkennen.</p>
+            <a href="https://www2.chemie.uni-erlangen.de/projects/vsc/chemie-mediziner-neu/kohlenwasserstoffe/bilder/hydrierung.gif"><img src="image5.gif" alt=""></a>
+            <p>Durch die Hydrierung, also Zufuhr von Wasserstoffatomen wird die Doppelbindung aufgespalten, weil sich die Wasserstoffatome dort ablagern. Durch diese Reaktion lagern sich die zugeführten Wasserstoff-Atome in die Doppelbindung ein und spalten sie dadurch.</p>
+            <h4>Fetthärtung mit Hydrierung:</h4>
+            <p>Durch die Hydrierung von Wasserstoff-Atomen werden die Doppelbindungen gespalten, wodurch die Van-der-Wals-Kräfte stärker werden und die Doppelbindungen nicht mehr vorhanden sind. Durch die Additionsreaktion und damit verbundene Hydrierung erfolgen diese Reaktionen die dazu führen das die Doppelbindungen nicht mehr vorhanden sind. Diese verbundenen Reaktionen sind der Bestandteil der Fetthärtung.</p>
+            <h4>Fetthärtung am Beispiel Olivenöl:</h4>
+            <p>Olivenöl besteht aus 78% aus Ölsäure und diese hat eine Doppelbindung. Wenn man diese Doppelbindungen entfernen würde mithilfe einer Additionsreaktion mit Wasser, dann würde das in Bezug auf die Masse, das Olivenöl fester werden lassen. Dann könnte Olivenöl ein festeres Streichfett werden. Auf dem unteren Bild ist die Struktur von Ölsäure zusehen, die Doppelbindung wird mit dem roten Pfeil markiert.</p>
+            <a href="https://jonaspews.github.io/script_11_1_soap_fat/img/fettsaeuren1.png"><img src="image6.png" alt=""></a>
+            <h3>Reflexion</h3>
+            <section class="Reflexionen">
+              <div id="Reflexionen">
+              <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+            
+            <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+            <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+            <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+              <!-- this canvas is later used to draw the chart, 
+                    if you want to draw several seperate charts you have to pay attention to the IDs -->
+              <!-- in diesem canvas wird das Digramm gezeichnet
+                    wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+              <canvas id="evaluation_07" style="border:1px solid"></canvas>
+            </div>
+            
+            <script>
+              var canvasId = "evaluation_07";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+              var chartTitle = "Kapitel 1";  // change accordingly
+              var dataSetValues = [15, 10, 15, 14, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+            
+                // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+              dataSetValues.forEach(function(item) {
+                  if (item < 0 || item > 15) {
+                    console.log(item);
+                    alert("Notenwert falsch: " + item + "!");
+                    dataSetValues = [0,0,0,0,0];
+                  };
+                }
+              );
+            
+              var chartCanvas = document.getElementById(canvasId);  // don't change this
+              var chartData = {
+                labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+                datasets: [
+                  {
+                  label: chartTitle,  // keep this
+                  backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+                  data: dataSetValues  // keep this
+                  }, 
+                ]
+              };
+            
+              var radarChart = new Chart(chartCanvas, {
+                type: 'radar',  // keep this
+                data: chartData,
+                options: {
+                    layout: {
+                      padding: 10
+                    },
+                    title: {
+                        display: true,
+                        text: 'Reflexion Fetthärtung'  // change this title as you like it
+                    },
+                    scale: {
+                        angleLines: {
+                            display: true
+                        },
+                        ticks: {
+                            min: 0,
+                            max: 15,
+                            stepSize: 2,
+                        }
+                    },
+                    responsive: true,  // keep this
+                    maintainAspectRatio: false  // keep this
+                }
+              });
+            </script>
+            </class>
+            <p>In diesem Kapitel hatte ich eigentlich keine Schwierigkeiten und habe das Thema auch gut verstanden. In der Gruppe habe ich nicht so viel gearbeitet, weil es kein Experiment war und es ziemlih kurz ist. Mittlerweile macht es mir auch spaß an diesem Portfolio zu arbeiten und auch das html zu schreiben. Beim nächsten mal könnte ich nicht immer so kompliziert denken, denn dies kostet mich sehr oft wertvolle Zeit. </p>
+            <hr>
+<h3>Ranziges Fett</h3>
+<h4>Herstellung von ranzigem Fett:</h4>
+<p>Bei der Herstellung von ranzigem Fett, werden die Fette zersetzt mithilfe verschiedener Faktoren wie etwa Licht, Sauerstoff, Enzyme, Mikroorganismen und Feuchtigkeit. Mithilfe der Hydrolyse werden an das Glycerin Wasserstoff-Atome angelagert wodurch die Ester Verbindung zwischen dem Glycerin und den Fettsäuren getrennt wird. Dadurch entstehen bei dieser Reaktion auch 3 Fettsäuren, die meist nieder- bis mittelkettig sind. Auf dem ersten Bild sieht man wie die Struktur des Fettes vor der Lipolyse aussieht. Auf dem zweiten Bild sieht man wie sich nach der Lipolyse Buttersäure gebildet hat. Weil die Verbindung zwischen den Fettsäuren und dem Glycerin getrennt wurden bleibt die Fettsäure als Produkt übrig und die Struktur sieht wie auf dem zweiten Bild zusehen aus.</p>
+<a href="https://www.chemieunterricht.de/dc2/haus/images/f-ester.jpg"><img src="image7.jpg" alt=""></a>
+<a href="https://laborshopinternational.com/wp-content/uploads/2017/08/buttersaeure_strukturformel-1280.png"><img src="image8.png" alt=""></a>
+<h4>Katalysatoren:</h4>
+<p>Katalysatoren erfüllen viele wichtige Aufgaben, wie zum Beispiel verkürzen sie die Reaktionszeit, reduzieren die benötigte Energie die für die jeweilige Reaktion gebraucht wird und liegen danach immer noch vor, also nehme nicht selber an der Reaktion teil.</p>
+<h4>Enzyme als Katalysatoren:</h4>
+<p>Das Gegenstück zu Schwefelsäure als Katalysator, sind biologische Katalysatoren, deren Eigenschaften mit den der anderen Katalysatoren gleich sind. Auch sie besitzen die gleichen Eigenschaften in Bezug auf das Katalysieren.</p>
+<h4>Herstellung von Buttersäure in der Schule:</h4>
+<p>Die Herstellung von Buttersäure im Chemieunterricht ist umstritten und das zurecht. Das Experiment birgt Probleme wie zum Beispiel den sehr penetranten Geruch von Buttersäure oder das die Carbonsäure sehr ätzend ist. Zudem entstehen bei der Herstellung Dämpfe, welche die Augen und Atemwege reizen können. Aus diesen genannten Gründen ist es eher ungeeignet für Schulexperimente, an denen jüngere Schüler teilnehmen, welche nicht besonders viel Erfahrung besitzen.</p>
+<h4>Veresterung von Buttersäure</h4>
+<p>Man kann eine Veresterung vornehmen, mit der Mithilfe des Alkohols und der Carbonsäure, kann ein Ester gebildet werden. In dem Fall mit Buttersäure wäre dieser dann Buttersäureethylester, der mit Hilfe von Buttersäure und zum Beispiel Ethanol zu Stande kommt.</p>
+<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Fischer-Veresterung_3.svg/1280px-Fischer-Veresterung_3.svg.png"><img src="image9.png" alt=""></a>
+<p>Als erstes wird die Carbonsäure protoniert, das heißt das Protonen an die Carbonsäure angelagert werden. Dadurch wird diese zu einer mesomeriestabilisierten Kation, ein Kation ist eine positive Ladung und der Begriff Mesomerie bezeichnet, das Bindungsverhältnisse nur mit mehreren Grenzformeln dargestellt werden.</p>
+<a href=": https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Fischer-Veresterung_4.svg/1100px-Fischer-Veresterung_4.svg.png"><img src="image10.png" alt=""></a>
+<p>Im nächsten Schritt greift die Hydroxygruppe das Kation an und lagern sich dann an dieses. Dies zeigt der lange rote Pfeil. Danach bildet ein Wasserstoff-Atom mit einem Sauerstoff-Atom der Caboxygruppe eine intramolekulare Wasserstoffbrücke und geht eine Verbindung mit diesem ein. Dies zeigen die kleinen roten Pfeile. Das davor mit dem anderen Sauerstoff-Atom verbundene Wasserstoff-Atom zu einer Hydroxygruppe, geht nun eine Verbindung mit dem anderen Sauerstoff-Atom ein. </p>
+<a href=": https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Fischer-Veresterung_5.svg/1100px-Fischer-Veresterung_5.svg.png"><img src="image11.png" alt=""></a>
+<p>Als letztes wird Wasser zu einem Kation abgespalten durch das Oxoniumion und danach entsteht ein Ester durch die Deprotonierung von dem Wasser. Auf dem ersten Bild ist zusehen durch die roten Pfeile das sich das sich Wasser abspaltet. Auf dem zweiten Bild sieht man das sich eine Doppelbindung gebildet hat und sich ein Wasserstoff-Atom durch die Deprotonierung abspaltet. Aus dieser Reaktion entsteht dann ein Ester und Wasser. Dieser heißt im Fall von Buttersäure, Buttersäureethylester und richt nach Ananas.</p>
+<h3>Reflexion</h3>
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_08" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_08";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [15, 12, 15, 13, 12];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion ranziges Fett'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+<p>In dem Kapitel ranziges Fett habe ich alleine aber auch in einer Gruppe gearbeitet. Mit meiner Zeitplanung bin ich nicht zufrieden, weil ich ziemlich viel Zeit gebraucht habe um dieses Kapitel zu bearbeiten. Das mache ich beim nächsten mal hoffentlich wieder besser. Dennoch habe ich alles Verstanden zu der Veresterung und Verseifung. Ich finde es gut das man bei diesem Kapitel wieder etwas aufrischen musste. Effizient habe ich eigentlich gearbeitet, obwohl ich am Anfang etwas verwirt war. Die Bildquellen sind wie immer im Bild :)</p>
+<hr>
+<h3>Stöchiometrie</h3>
+<p>Im unteren Bild sehen Sie eine Aufgabe der Stöchiometrie, in der mithilfe des Stoffmengenverhältnis das Massenverhältniss berechnen.</p>
+<a href=""><img src="image12.jpg" alt=""></a>
+<h2>Reflexion</h2>
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_09" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_09";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [12, 12, 11, 12, 11];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion Stöchiometrie'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+<p>In diesem Kapitel würde ich meine allgemeine Arbeit als eher mittel Wertig einschätzen. Bei deisem Thema habe ich in einer Gruppe aber auch in Einzelarbeit gearbeitet aber dennoch habe ich meine Zeit nicht immer effektiv genutzt. In der Zeit die ich genutzt habe hätte ich mehr Aufgaben bearbeiten können und hätte das Thema dann wahrscheinlich auch besser verstanden. Ehrlich gesagt würde ich mir für die Zukunft wünschen, dass wir dieses Thema vielleicht irgendwann nochmal haben. Also einen kurzen Rückblick dazu. Im großen und ganzen bin ich in diesem Kapitel nicht zufrieden mit meiner Leistung und ich hoffe das ändert sich wieder.</p>
+<hr>
+<h3>Waschmittel vs. Seife</h3>
+<h4>Auftrag: Lösen Sie die Streitfrage: ist Seife das Gleiche wie Waschmittel?!</h4>
+<h4>Waschmittel vs. Seife</h4>
+<p>Waschmittel und Seife unterscheiden sich von den Inhaltsstoffen aber auch von der Wirkung. Seife zum Beispiel, kann Stoffe beschädigen, weil es im Wasser alkalische reagieren kann. Allerdings ist Seife gut biologisch Abbaubar im Gegensatz zu Waschmittel in dem die sogenannten Builder (wasserlösliche Salze) sind, die die Eutrophierung von Gewässer verstärken. Dafür sind in Waschmittel auch Waschalkalien. Diese lassen die Fasern von Stoffen aufquellen, indem sie den Ph-Wert erhöhen, dadurch lässt sich Schmutz besser entfernen. Deshalb ist die Waschwirkung in Bezug auf das Waschen von Stoffen, bei Waschmittel besser als bei Seife. Ein weiterer Nachteil der Seife ist das sie in hartem Wasser mit den darin enthaltenen Calcium-ion reagiert. Dadurch wird die Waschwirkung der Seife verschlechtert, weil schwer lösliche Kalkseifen entstehen. Aus diesen Gründen ist Seife besser geeignet zur Reinigung von der Haut als zur Reinigung von Wäsche. Bei Wäsche ist Waschmittel die bessere Wahl.</p>
+<h4>Inhalte von Waschmitteln:</h4>
+<p>In der Abbildung sind die Inhaltsstoffe von Waschmitteln zu sehen.</p>
+<img src="image13.png" alt="">
+<h3>Reflexion</h3>
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_10" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_10";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [15, 12, 15, 15, 13];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion Waschmittel vs. Seife'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+<p>In diesem Kapitel habe ich in Einzel- aber auch in Gruppenarbeit gearbeitet. Meine Zeit habe ich sinvoll genutzt und auch schnell das Thema verstanden. Die Zeitplanung ist mir gut gelungen und deshalb würde ich sagen das es auch Effizient war. Beim nächsten mal könnte ich vielleicht nochmal mehr ins Detail gehen und damit auch ausführlicher das Thema erklären. </p>
+<hr>
+<h2>Abschließende Reflexion</h2>
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_11" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_11";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [14, 12, 13, 13, 13];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Abschließende Reflexion'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+<p>Dieses Skript war nicht nur vom Inhalt etwas neues für mich, sondern auch im teschnichen Sinne. Als erstes werde ich auf die Punkte der Reflexion eingehen. Meine Einzelarbeit fande ich sehr gut, genau wie meine Gruppenarbeit. Meine Zeitplanung ist nicht optimal aber dennoch gut und die Effizienze wie ich arbeite würde ich als sehr gut einordnen, weil es mir auch spaß macht an dem Skript zu arbeiten. Es ist einfach schön etwas zu lernen das einem oft im Leben begegnet. An sich finde ich es eine gute Idee das Skript in form von einer html-Datei zuführen. Anfangs war es etwas schwer richtig reinzukommen, doch mittlerweil ist es schon einfacher geworden. Leider konnte ich in diesem Skript zeitlich nichtmehr veränderungen im optischen Auftreten verändern, doch dies setze ich mir als Ziel für das nächste Skript. Was ich auch noch verbessern muss ist, dass ich nicht immer so kompliziert denke. Gerade im Kapitel ranziges Fett habe ich erst anstatt der Veresterung erst die Verseifung genommen. Jetzt weiß ich das dies die Gegenreaktion zur Veresterung ist. Zudem hätte ich besser zuhören müssen, denn ohne die verlängerung der Abgabefrist, hätte ich es nicht geschafft das Skript richtig abzugeben. Abschließend kann ich sagen, dass es mir wieder viel Spaß gemacht hat an diesem Skript zu arbeiten, auch wenn es rückschläge gab (kein Backup, kein Mitleid) habe ich dazu gelernt. Mit freundlichen Grüßen Hannes Bluhm </p>
+<hr>
+<h2>Quellen</h2>
+<section class="Quellen">
+<a href="https://seilnacht.com/">seilnacht</a>
+</section>
+<section class="Quellen">
+<a href="https://www.chemie.de/">Chemie</a>
+</section>
+<section class="Quellen">
+  <a href="https://www.wikipedia.de/">Wikipedia</a>
+</section>
+<section class="Qullen">
+<a href="http://www.unterrichtsmaterialien-chemie.uni-goettingen.de/">Uni-Goettingen</a>
+</section>
+<section class="Quellen">
+<a href="https://www.chemieunterricht.de/dc2/">Prof.Blume</a>
+</section>
+<section class="Quellen">
+<a href="https://www.lernhelfer.de/schuelerlexikon/chemie/artikel/waschmittel">Lernhelfer</a>
+</section>
+<section class="Quellen">
+<a href="https://bildungsserver.berlin-brandenburg.de/chemie-unterrichtsmaterialien">Bildungsserver Berlin/Brandenburg</a>
+</section>
+
+
+<div id="footer"></div>
+
+</body>
+
+
+</html>

@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Chemie Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="device-widht, intial-scale=1">
+</head>
+
+<body>
+
+<div  id="top">
+    <div id="logo">HB</div>
+    <div id="logo-name"> Portfolio Hannes Bluhm</div>
+    <div id="navigation">
+        <a href="#Protokolle">Protokolle</a>
+        <a href="Präsentationen">Präsentation</a>
+        <a href="#Reflexionen">Reflexionen</a>
+        <a href="2index.html">altes Skript</a>
+      </div>
+      <div id="image">
+        <a href="https://unsplash.com/t/wallpapers"><img src="image.jfif" alt=""></a>
+      </div>
+      </div>
+
+
+
+</body>
+<div id="main">
+<section id="Protokolle">
+        <h2>Protokolle </h2>
+        <a href="Protokoll Kalkkreislauf.pdf">Protokoll Kalkkreislauf</a> </section>
+        <a href="Protokoll Titration.pdf">Protokoll Titration</a> </section>
+<section id="Präsentationen">
+  <h2>Präsentation</h2>
+  <a href="Präsentation Metallherstellung Aluminium.pdf">Präsentation Metallherstellung Aluminium</a>
+</section>
+
+  <section id="Reflexion">
+<h2>Reflexionen</h2>
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_04" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_04";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [15, 14, 14, 14, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion: Protokoll Kalkkreislauf'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+
+<div id="Texte">
+<p>Bei der Erarbeitung des Protokolls Kalkkreislauf, habe ich sowohl in Gruppenarbeit und auch Einzelarbeit gearbeitet. Das Thema habe ich sehr schnell verstanden und deshalb sehr effizient die Zeit genutzt. Erst habe ich alleine gearbeitet und später habe ich zusammen mit Anderen die Ergebnisse ausgetauscht. Ingesamt bin ich bei diesem protokoll mit meiner Leistung zu frieden.</p></div>
+
+
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_05" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_05";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [8, 14, 14, 14, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion: Protokoll Titration'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+
+<div id="Texte">
+  <p> Bei dem bewerteten Experiment der Titration habe ich die meiste Zeit in einer Gruppe gearbeitet und dementsprechend weniger in Einzelarbeit. Bis auf die Ermittlung des Ph-Wertes mithilfe einer Rechnung hatte ich keine Probleme das Thema in kurzer Zeit zu verstehen. Bei der Berechnung des Ph-Wertes hatte ich Anfangs Probleme und konnte diese durch die Hilfe meiner Gruppe und durch die Erklärung durch den Lehrer schließlich lösen. Die Zeit habe ich effektiv genutzt, denn bei dem Experiment hatte wir für alles (Protokoll, Durchführung, Beobachtung und Auswertung) nur 90 min Zeit. Dennoch lies sich in der vorgegebenen Zeit, alles erledigen.</p>
+</div>
+
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_06" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_06";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [15, 10, 15, 12, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion: Präsentation Metallherstellung Aluminium'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+
+<div id="Texte">
+  <p> Bei der Erabeitung der Präsentation über die Herstellung von Aluminium habe ich alles sehr gut verstanden und auch effizient gearbeitet. Allerdings habe ich erst wieder etwas später angefangen mit dem arbeiten, meist habe ich alleine gearbeitet, was für mich aber durch aus kein Problem ist. In der Gruppe habe ich dann meist mit den anderen über das Thema disskutiert. Mir persönlich hat die Erarbeitung der Präsentation spaß gemacht und ich habe viele interessante Information über die Herstellung von Aluminium gewonnen aber auch allgemein konnte ich mir neues Wissen erlangen. Ich finde es gut das mein Lehrer die Präsentation immer etwas anspruchsvoller und mit Audiodatein verlangt, denn so ist es erstens, abwechslungsreicher und man soll ja schließlich auch etwas lernen. </p>
+</div>
+<hr>
+<h2>A world without us</h2>
+<h4><u>Materialien für den Hausbau:</u></h4>
+<table border="6" style="width: 100%;">
+  <td><b>Anorganisch</b>  </td>
+  <td><b>Asphalt Farben</b></td>
+  <td><b>Organisch</b></td>
+ <tr>
+   <td>Granit</td>
+   <td></td>
+   <td>PNC</td>
+ </tr>
+ <tr>
+   <td>(Ton)-Dachziegel</td>
+   <td></td>
+   <td>Holz</td>
+ </tr>
+ <tr>
+   <td>Schiefer</td>
+   <td></td>
+    <td>Spanplatten</td>
+   </tr>
+   <tr>
+     <td>Beton (Sand, Wasser)/Zement</td>
+     <td></td>
+     <td>Leim</td>
+   </tr>
+   <tr>
+     <td>Gips</td>
+     <td>Asphalt Farben</td>
+     <td>Vinyl</td>
+   </tr>
+   <tr>
+     <td>Keramik</td>
+     <td></td>
+     <td>Plastik</td>
+    </tr>
+    <tr>
+      <td>Glas</td>
+      <td></td>
+      <td>Kunstharz</td>
+    </tr>
+    <tr>
+      <td><b>Metalle:</b></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Fe (Eisen)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Cu (Kupfer)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>ALu (Aluminium)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    </table>
+
+    <h3><u>Reflexion</u></h3>
+    <section class="Reflexionen">
+      <div id="Reflexionen">
+      <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+    <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+    <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+    <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+      <!-- this canvas is later used to draw the chart, 
+            if you want to draw several seperate charts you have to pay attention to the IDs -->
+      <!-- in diesem canvas wird das Digramm gezeichnet
+            wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+      <canvas id="evaluation_07" style="border:1px solid"></canvas>
+    </div>
+    
+    <script>
+      var canvasId = "evaluation_07";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+      var chartTitle = "Kapitel 1";  // change accordingly
+      var dataSetValues = [15, 12, 15, 15, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+        // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+      dataSetValues.forEach(function(item) {
+          if (item < 0 || item > 15) {
+            console.log(item);
+            alert("Notenwert falsch: " + item + "!");
+            dataSetValues = [0,0,0,0,0];
+          };
+        }
+      );
+    
+      var chartCanvas = document.getElementById(canvasId);  // don't change this
+      var chartData = {
+        labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+        datasets: [
+          {
+          label: chartTitle,  // keep this
+          backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+          data: dataSetValues  // keep this
+          }, 
+        ]
+      };
+    
+      var radarChart = new Chart(chartCanvas, {
+        type: 'radar',  // keep this
+        data: chartData,
+        options: {
+            layout: {
+              padding: 10
+            },
+            title: {
+                display: true,
+                text: 'Reflexion: A world without us'  // change this title as you like it
+            },
+            scale: {
+                angleLines: {
+                    display: true
+                },
+                ticks: {
+                    min: 0,
+                    max: 15,
+                    stepSize: 2,
+                }
+            },
+            responsive: true,  // keep this
+            maintainAspectRatio: false  // keep this
+        }
+      });
+    </script>
+    </class>
+
+    <div id="Texte"> 
+      <p>Während der Aufgabeneinheit Materialien für den Hausbau war ich leider nicht in der Lage diese zumachen aufgrund gesuntheitlicher Problem, weshalb ich sie erst später nachgearbeitet habe. Das heißt natürlich nicht das ich sie nicht haben muss, denn ich kann sie ja selbständig nacherbeiten so gut es geht. Bei dieser Aufgabe ging es darum die Baustoffe chemisch zu unterteilen in Anorganische und Organische. Zusätzlich gibt es noch die Gruppe der Asphalt Farben, welche ihre eigene Kategorie bekommt. Die Bearbeitung dieser Aufgabe hat nicht viel Zeit gebraucht und ich kam schnell voran. Das Thema habe ich verstanden, da es lediglich um die einteilung in die zwei Kategorien gab, die man eigentlich schon kennen sollte. Gearbeitet habe ich größtenteils in Einzelarbeit, jedoch habe ich die Ergebnisse in einer Gruppe verglichen.</p>
+    </div>
+<hr>
+<h2>Clay-Lehm</h2>
+<div id="Teilüberschriften">
+<h3><u>Verwendung von Lehm und Ton: </u></h3>
+</div>
+
+<div id="Texte">
+  <p>Lehm kann zur Herstellung von Ziegeln verwendet werden. Zudem kann Hafnerlehm als Baumaterial für Lehmöfen verwenden. Ton wird für die Herstellung von Schamotten benötigt, welche die Innenauskleidung der Öfen ist. Zusätzlich wird Ton als Füllstoff bei der Herstellung von Papier eingesetzt. Durch die Eigenschaften von Ton eignet er sich sehr gut als Baustoff, wenn er gebrannt wird er deutlich belastbarer.</p>
+</div>
+
+<div id="Teilüberschriften">
+  <h3><u>Unterschied zwischen Lehm und Ton:</u></h3>
+</div>
+<div id="Texte">
+  <p>Lehm ist deutlich stärker verunreinigt als Ton. Ton besteht aus reineren Tonmineralien, welche keine so starke Verunreinigung aufweisen wie die des Lehms, diese Mineralien sind häufigen organischen Ursprungs. Durch diese verschiedenen Beschaffenheiten, werden auch die Eigenschaften der daraus hergestellten Baustoffe/Produkte beeinflusst. Lehm besteht im Grundsätzlichen aus Ton und weiteren Mineralien, welche sich meist im Boden befinden, weshalb Lehm auch stärker verunreinigt sind.</p>
+</div>
+
+<div id="Teilüberschriften">
+  <h3><u>Bestandteile von Ton:</u></h3>
+</div>
+<div id="Texte">
+  <p>Zu den Bestandteilen von Ton gehören Stoffe wie etwa: Siliciumoxid (SiO4) oder Aluminiumoxid (ALO4). Der Ton bildet sich aus dem Kristallnetz dieser beiden Moleküle., zudem können auch weitere Stoffe in geringeren Mengen vorkommen, wie etwa Kalium, Natrium oder Kalzium.</p>
+</div>
+
+<div id="Teilüberschriften">
+  <h3><u>Verwendungsmöglichkeiten und damit verbundene Bearbeitungsprozesse:</u></h3>
+</div>
+<div id="Texte">
+  <p>Lehm besteht aus Ton, Schluff und Sand. Deshalb ist davon auszugehen, dass beide dieser Stoffe sich in der Verwendung ähneln. Aus Lehm können Lehmziegel hergestellt werden und aus Ton zum Beispiel auch Tonziegel.  Lehm wird auch für den Bau von Öfen verwendet, in denen Ton dann als Abdichtungsmittel dient (Schamotten).</p>
+</div>
+
+<div id="Teilüberschriften">
+  <h3><u>Aufstellung von Summenformeln von Salzen:</u></h3>
+</div>
+<div id="Texte">
+  <p>Bei dem Aufstellen von Summenformeln ist zuerst zu beachteten, in welchem Verhältnis die Beiden Stoffe zu einander sind. Aluminium ist 3-fach positiv geladen und Sauerstoff 2-fach negativ. Um es auszugleichen, sodass die Ladung am Ende neutral ist, benötigt man 2-mal Aluminium und 3-mal Sauerstoff, deshalb ist das Verhältnis 2 zu 3. Die Summenformel lautet daher: AL2O3, graphisch Dargestellt auf dem unteren Bild.</p>
+</div>
+<div id="image">
+  <a href="https://www.youtube.com/watch?v=f6F-xRJTR-M"><img src="Aliuminiumoxid Summenformel.jpg" alt=""></a>
+</div>
+
+<div id="Teilüberschriften">
+  <h3><u>Aluminium-Ionen:</u></h3>
+</div>
+<div id="Texte">
+  <p>Aluminium hat eine Ladung von 3 Protonen im Kern und 3 Elektronen in seinen Außenschalen. Da sich die Außenschalen immer füllen vollen, der Stoffe welcher mehr Außenelektronen in der Außenschale besitzt nimmt die Elektronen auf und der Stoff der weniger Außenelektronen in der Schale hat gibt seine Elektronen ab, dadurch hat Aluminium eine Ladung von plus 3.</p>
+</div>
+
+<h3><u>Reflexion</u></h3>
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_08" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_08";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [15, 12, 15, 15, 13];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion: Clay Lehm'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+</section>
+
+<div id="Texte">
+  <p> Bei dieser Aufgabe, arbeitete ich meist alleine und das auch sehr effizient. Jedoch habe ich auch in der Gruppenarbeit meine Ergebnisse mit Anderen ausgetauscht und so meine Ergebnisse überprüfen können. Das Thema habe ich soweit auch verstanden und die Wiederholung zum Thema Aufstellung von Summenformeln fand ich persönlich nocheinmal sehr gut, da man dieses Grundwissen nocheinmal anwenden sollte und so sein Grundwissen auffrischen konnte. Ps. die Quelleangabe ist natürlich wieder im Bild :). </p>
+  </div>
+  <hr>
+  
+
+  <h2>Kalk, Zement, Beton</h2>
+  <div id="Teilüberschriften">
+    <h3><u>Marmor und Kalk:</u></h3>
+  </div>
+  <div id="Texte">
+    <p>Marmor und Kalk sind organischen Ursprungs und ihre Eigenschaften sind sehr ähnlich. Das ist so, weil Marmor ein Kalksteinart ist. Marmor entsteht in größerer Tiefe, wo es auch stärkerem Druck ausgesetzt ist und deshalb auch Metamorphes Gestein bezeichne wird. Marmor und Kalk sind zudem in der Baubranche eher für die Innenbereiche geeignet, da sie nicht frostbeständig sind.</p>
+  </div>
+
+  <div id="Teilüberschriften">
+    <h3><u>Bauchemie in der Antike:</u></h3>
+  </div>
+  <div id="Texte">
+    <p>Die Römer benutzten für ihre Bauprojekte eine Art „Zement“ der aus Sand, Wasser und gebranntem Kalk und Steinbrocken bestand, dieser Zement ist sehr fest und hat im Gegenteil zu Lehm Eigenschaften die vorteilhafter sind. Den der Zement eignet sich auch für Hafenanlagen oder Gebäude welche sich in feuchten Gebieten befindet. Den der Zement bindet mit Wasser ab und ist deshalb auch im Wasser fest. Der Kalkmörtel wird dagegen abgewaschen durch Wasser, weshalb der neu erfundene Zement eine sehr große Bedeutung für die Baubranche/Entwicklung von Baustoffen hatte.</p>
+  </div>
+
+  <h3><u>Reflexion</u></h3>
+<section class="Reflexionen">
+  <div id="Reflexionen">
+  <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+
+<!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+<!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+<div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+  <!-- this canvas is later used to draw the chart, 
+        if you want to draw several seperate charts you have to pay attention to the IDs -->
+  <!-- in diesem canvas wird das Digramm gezeichnet
+        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+  <canvas id="evaluation_09" style="border:1px solid"></canvas>
+</div>
+
+<script>
+  var canvasId = "evaluation_09";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+  var chartTitle = "Kapitel 1";  // change accordingly
+  var dataSetValues = [15, 0, 15, 14, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+  dataSetValues.forEach(function(item) {
+      if (item < 0 || item > 15) {
+        console.log(item);
+        alert("Notenwert falsch: " + item + "!");
+        dataSetValues = [0,0,0,0,0];
+      };
+    }
+  );
+
+  var chartCanvas = document.getElementById(canvasId);  // don't change this
+  var chartData = {
+    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+    datasets: [
+      {
+      label: chartTitle,  // keep this
+      backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+      data: dataSetValues  // keep this
+      }, 
+    ]
+  };
+
+  var radarChart = new Chart(chartCanvas, {
+    type: 'radar',  // keep this
+    data: chartData,
+    options: {
+        layout: {
+          padding: 10
+        },
+        title: {
+            display: true,
+            text: 'Reflexion: Kalk, Zement, Beton'  // change this title as you like it
+        },
+        scale: {
+            angleLines: {
+                display: true
+            },
+            ticks: {
+                min: 0,
+                max: 15,
+                stepSize: 2,
+            }
+        },
+        responsive: true,  // keep this
+        maintainAspectRatio: false  // keep this
+    }
+  });
+</script>
+</class>
+</section>
+
+<div id="Texte">
+  <p>Bei diesem Kapitel habe ich nicht viel Zeit benötigt und das Tehma sehr gut verstand. Ich habe in Einzelarbeit die Aufgaben erledigt und das auch sehr effizient. Beim nächsten mal sollte ich genau so weiter arbeiten. </p>
+</div>
+<hr>
+
+<h2>Saurere Regen und Gebäudeschäden</h2>
+  <div id="Teilüberschriften">
+    <h3><u>Was ist Sauerer Regen?</u></h3>
+  </div>
+  <div id="Texte">
+    <p>Bei dem sogenannten sauren Regen, handelt es sich um Niederschläge, dessen ph-Wert unter 5,5 liegt, also sauer ist. Dieser saure Regen entsteht, wenn ein Nichtmetalloxid, z.Bsp. Schwefeldioxid oder sogar Schwefeltrioxid mit Wasser in Verbindung kommt. Dadurch bildet sich dann eine Säure, in diesem Fall Schweflige Säure.</p>
+  </div>
+
+  <div id="Teilüberschriften">
+    <h3><u>Entstehung von Schwefeliger Säure mit Schwefeldioxid und Schwefeltrioxid:</u></h3>
+  </div>
+  <div id="Texte">
+    <p>Bei der ersten Reaktion ist zusehen wie aus Schwefeldioxid und Wasser Schwefelige Säure wird. Die 2 Sauerstoff-Atome von Schwefeldioxid und das eine Sauerstoff-Atom von Wasser werden zu drei Sauerstoff-Atomen. In der zweiten Reaktion ist nun anstatt Schwefeldioxid, Schwefeltrioxid verwendet worden, welches nun mit Wasser reagiert. Da das Schwefeltrioxid 3 Sauerstoff-Atome hat und Wasser immer noch eins, hat man am Ende vier. Der einzige unterschied ist das Schwefeltrioxid ein Sauerstoff-Atom mehr aufgenommen hat als Schwefeloxid und deshalb mehr Sauerstoff-Atome besitzt (genau eins).</p>
+  </div>
+  <div id="image">
+    <a href="https://th.bing.com/th/id/R.cf4021ce6dfcadca6cf8b0345105897d?rik=D0PHATCbESk2Ag&riu=http%3a%2f%2fwww.chemieunterricht.de%2fdc2%2fschwefel%2fimages%2fs-32.gif&ehk=Ojt31GcsFZNTk4hZM%2fjOgNJZZlW3vQcu01YFhDnXLKU%3d&risl=&pid=ImgRaw&r=0"><img src="2Reaktionsgleichung Schwefeltrioxid plus Wasser.png" alt=""></a>
+  </div>
+
+  <div id="Teilüberschriften">
+    <u><h3>Wortgleichung Entstehung von Säuren:</h3></u>
+  </div>
+  <div id="Formeln">
+    <p>Nichtmetalloxid+Wasser→Säure</p>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>Gebäudeschädigung durch Sauren Regen:</h3></u>
+    </div>
+    <div id="Texte">
+      <p>Allgemein lässt sich sagen, dass eine starke Säure eine schwächere Säure aus ihrem Salz verdrängt. Bei Schweflsäure und Kalk ist genau das der Fall. Bei Kalk handelt es sich um das Salz der Kohlensäure, dies ist eine sehr schwache Säure. Dadurch das die Schwefelsäure stärker ist, entweicht Kohlenstoffdioxid, da die Kohlensäure ausgetrieben wird. Dabei wird aus dem Kohlensäuresalz (Carbonat) Schwefelsäuresalz (Sulfat). In der unteren Reaktionsgleichung lässt sich zeigen, dass wenn Calciumhydroxid mit Schwefelsäure reagiert es zu Calciumsulfat und Wasser. Aus dem Carbonat wird ein Sulfat, da die stärkere Säure die schwächere Säure aus ihrem Salz verdrängt.</p>
+    </div>
+    <div id="image">
+      <a href="#selfmade"><img src="Schwelfsäure reagiert mit Calciumhydroxid Reaktionsgleichung.png" alt=""></a>
+    </div>
+
+    <h3><u>Reflexion</u></h3>
+    <section class="Reflexionen">
+      <div id="Reflexionen">
+      <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+    <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+    <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+    <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+      <!-- this canvas is later used to draw the chart, 
+            if you want to draw several seperate charts you have to pay attention to the IDs -->
+      <!-- in diesem canvas wird das Digramm gezeichnet
+            wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+      <canvas id="evaluation_12" style="border:1px solid"></canvas>
+    </div>
+    
+    <script>
+      var canvasId = "evaluation_12";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+      var chartTitle = "Kapitel 1";  // change accordingly
+      var dataSetValues = [15, 10, 15, 15, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+        // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+      dataSetValues.forEach(function(item) {
+          if (item < 0 || item > 15) {
+            console.log(item);
+            alert("Notenwert falsch: " + item + "!");
+            dataSetValues = [0,0,0,0,0];
+          };
+        }
+      );
+    
+      var chartCanvas = document.getElementById(canvasId);  // don't change this
+      var chartData = {
+        labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+        datasets: [
+          {
+          label: chartTitle,  // keep this
+          backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+          data: dataSetValues  // keep this
+          }, 
+        ]
+      };
+    
+      var radarChart = new Chart(chartCanvas, {
+        type: 'radar',  // keep this
+        data: chartData,
+        options: {
+            layout: {
+              padding: 10
+            },
+            title: {
+                display: true,
+                text: 'Reflexion:saurer Regen und Gebäudeschäden'  // change this title as you like it
+            },
+            scale: {
+                angleLines: {
+                    display: true
+                },
+                ticks: {
+                    min: 0,
+                    max: 15,
+                    stepSize: 2,
+                }
+            },
+            responsive: true,  // keep this
+            maintainAspectRatio: false  // keep this
+        }
+      });
+    </script>
+    </class>
+    </section>
+
+    <div id="Texte">
+      <p>Während dieses Kapitels habe ich fast auschließlich alleine gearbeitet und lediglich ein wenig austausch mit anderen Kursteilnehmern gehabt. Das Thema habe ich sehr schnell verstanden und das auch durchaus gut, die Zeit habe ich nicht genau beobachtet, weshalb ich sagen würde das ich eigentlich sehr zielstrebig gearbeitet habe und man es als effizient nenne könnte.</p>
+    </div> 
+
+
+
+
+    
+
+<hr>
+
+
+    <h2>Stöchiometrie/Zementherstellung</h2>
+    <div id="Teilüberschriften">
+      <u><h3>Herstellung:</h3></u>
+    </div>
+    <div id="Texte">
+      <p>Für die Herstellung von Zement benötigt man als erstes, Calciumcarbonat (CaCO3) und Siliciumdioxid (SiO2), diese Anforderungen erfüllen z.Bsp. Kalkstein (Calciumcarbonat) und Ton (Siliciumdioxid). Zudem werden geringe Mengen von Aluminiumoxid (Al2O3) und Eisenoxid (Fe2O3) benötigt. Diese Stoffe werden oft separat abgebaut und später in geeigneten Verhältnissen gemischt. Bei der Zementherstellung gibt es 5 Phasen. Die erste Phase ist die Gewinnung und Aufbereitung des Rohmaterials. Die einzelnen Schritte sind unterteilt in vier Punkte, ganz unten ist der Vorgang nocheinmal in einem Fließschema dargestellt.</p>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>1. Gewinnung und Aufbereitung des Rohmaterials:</h3></u>
+    </div>
+    <div id="Texte">
+      <li>Abbau durch Sprengverfahren</li>
+      <li>In Brecheranlage → zu Schotter verarbeitet/aufgeschüttet zu Mischbetten</li>
+      <li>Calciumcarbonatgehalt 76-78%</li>
+      <li>Zugabe von Korrekturstoffen</li>
+      <li>Rohmischung in Mahltrocknungsanlagen → gemahlen/getrocknet</li>
+      <li>In Silos durch systematisches Befüllen und Abziehen „homogenisiert“ (vermischt)</li>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>2. Brennen des Zementklinkers:</h3></u>
+    </div>
+    <div id="Texte">
+      <li>Brennen erfolgt in Drehöfen</li>
+      <li>Rohmehl erhitzt auf 830°C</li>
+      <li>Kohlenstoffdioxid entweicht aus Calciumcarbonat (leicht entsäuert)</li>
+      <li>Entstehung von Calciumoxid</li>
+      <li>Sinterzone bis zu 1400-1450°C erhitzt (Sinterung)</li>
+      <li>Ausgangsstoffe Calciumsilicate und Calciumaluminate (hydraulische Härtung)</li>
+      <li>Zementklinker, wird gekühlt</li>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>3. Mahlen des Zements:</h3></u>
+    </div>
+    <div id="Texte">
+      <li>Zementklinker wird fein gemahlen (Mahlfeinheit)</li>
+      <li>Je nach Zementart unterschiedliche Mischverhältnisse</li>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>4. Bindungsprozess (Hydratation):</h3></u>
+    </div>
+    <div id="Texte">
+      <li>Abbinden mit Wasser (Hydration)</li>
+      <li>Feste Hydrate (Stoffe mit H2O Einlagerungen)</li>
+      <li>Physikalische Fertigkeit</li>
+    </div>
+
+    <div id="image">
+      <a href="https://th.bing.com/th/id/R.9c371f69534a9f05158426f54643bb39?rik=4jvdcxc114UXrA&riu=http%3a%2f%2fwiki.beton-informationen.de%2fimages%2fthumb%2f0%2f0e%2fZementherstellung.jpg%2f300px-Zementherstellung.jpg&ehk=u2LP3h%2f2vqeWtL8kJUzTaT0qMY74r%2bKcDMRxYsclqp0%3d&risl=&pid=ImgRaw&r=0"><img src="Herstellung von Zement.jpg" alt=""></a>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>Kalk und Zement Unterschiede:</h3></u>
+    </div>
+    <div id="image">
+      <a href="#selfmade"><img src="Kalk und Zement Unterschiede Tabelle.png" alt=""></a>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>Stöchiometrieaufgabe und Reaktionsgleichung:</h3></u>
+    </div>
+    <div id="image">
+      <a href="#safemade"><img src="Stöchiometrieaufgabe und Reaktionsgleichung Zementherstellung.jpg" alt=""></a>
+    </div>
+
+    <h3><u>Reflexion</u></h3>
+
+    <section class="Reflexionen">
+      <div id="Reflexionen">
+      <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+    <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+    <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+    <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+      <!-- this canvas is later used to draw the chart, 
+            if you want to draw several seperate charts you have to pay attention to the IDs -->
+      <!-- in diesem canvas wird das Digramm gezeichnet
+            wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+      <canvas id="evaluation_10" style="border:1px solid"></canvas>
+    </div>
+    
+    <script>
+      var canvasId = "evaluation_10";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+      var chartTitle = "Kapitel 1";  // change accordingly
+      var dataSetValues = [15, 13, 15, 12, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+        // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+      dataSetValues.forEach(function(item) {
+          if (item < 0 || item > 15) {
+            console.log(item);
+            alert("Notenwert falsch: " + item + "!");
+            dataSetValues = [0,0,0,0,0];
+          };
+        }
+      );
+    
+      var chartCanvas = document.getElementById(canvasId);  // don't change this
+      var chartData = {
+        labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+        datasets: [
+          {
+          label: chartTitle,  // keep this
+          backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+          data: dataSetValues  // keep this
+          }, 
+        ]
+      };
+    
+      var radarChart = new Chart(chartCanvas, {
+        type: 'radar',  // keep this
+        data: chartData,
+        options: {
+            layout: {
+              padding: 10
+            },
+            title: {
+                display: true,
+                text: 'Reflexion:Stöchiometrie und Zementherstellung'  // change this title as you like it
+            },
+            scale: {
+                angleLines: {
+                    display: true
+                },
+                ticks: {
+                    min: 0,
+                    max: 15,
+                    stepSize: 2,
+                }
+            },
+            responsive: true,  // keep this
+            maintainAspectRatio: false  // keep this
+        }
+      });
+    </script>
+    </class>
+    </section>
+
+    <div id="Texte">
+      <p>Bei diesem Kapitel hatte ich anfangs ein wenig Probleme mit den ganzen Informationen die man zu der Herstellung von Zement findet. Allerdings war das nach kurzer Zeit schon deutlich übersichtlicher. Mit den Aufgaben an sich hatte ich keine Probleme, ich habe alles verstanden und das alles auch zeitlich gut geschafft. Mittlerweile finde ich es irgendwie sehr gut das ich bei diesem neuen Portfolio versuche das ganze etwas anschaulicher zu machen. So habe ich bei diesem Kapitel das erste mal auch Stichpunkte verwendet, mit denen das Kapitel auch etwas übersichtlicher ist und man die Informationen viel schneller auffassen kann. Die Stöchiometrieaufgaben haben wir am Ende übrigens auch noch in unserem Kurs verglichen und sie wurden nocheinmal detailliert erklärt. Zudem wollte ich Ihnen noch einmal sagen warum ich bei dem Punkt Kalk und Zement Unterschiede eine Tabelle genommen habe anstatt es in gleich in das html zu schreiben, bis jetzt habe ich leider noch nicht herausgefunden wie man Formeln einfügen kann. Tabellen sind mittlerwile kein Problem mehr und nun steht er das Optische immmer weiter im Fordergrund. </p>
+    </div>
+
+    <hr>
+
+    <h2>Titration</h2>
+
+    <div id="Teilüberschriften">
+      <u><h3>Erklärung verschiedener Begriffe:</h3></u>
+    </div>
+    <div id="Texte">
+      <p><b>Mol:</b>Mit Mol bezeichnet man die Einheit der Stoffmenge die ein Stoff besitzt. Ein Mol eines Stoffes besitzt immer genau 602 Trilliarden Teilchen.</p>
+    </div>
+    <div id="Texte">
+      <p><b>Säure-Lösung:</b>Eine Saure-Lösung ist eine Lösung, welche einen pH-Wert von unter 7 hat, also sauer ist.</p>
+    </div>
+    <div id="Texte">
+      <p><b>Konzentration:</b>Die Stoffkonzentration gibt an wieviel von einem Stoff/Stoffgemisch in der Gesammenge enthalten sind. </p>
+    </div>
+    <div id="Texte">
+      <p><b>Indikator:</b>: Als Indikator beschreibt man einen Stoff mit deren Hilfe man den pH-Wert ermitteln kann, also zum Beispiel der Universal-Indikator. Allgemein lässt sich der Indikator in 4 Bereiche unterteilen, den pH-Indikator, Redox-Indikator, Komplexindikator und den Thermoindikator.</p>
+    </div>
+    <div id="Texte">
+      <p><b>Dissoziation:</b>Bei der Dissoziation zerteilt sich ein Stoff in mehrere Moleküle, Atome oder auch Ionen. Um eine Chemische Bindung zu trennen benötigt man zudem Dissoziationsenergie.</p>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>Der pH-Wert:</h3></u>
+    </div>
+    <div id="Texte">
+      <p>Der pH-Wert hat in der Chemie eine sehr große Bedeutung. Er gibt an ob ein Stoff/Stoffgemisch sauer, neutral oder basisch ist. Auf einer Skala von 1 bis 14 zeigt er je nach Farbe einen bestimmten pH-Wert an. Von 0-7 gelten Stoffe als sauer, bei 7 sind Stoffe neutral und von 7-14 sind sie basisch alkalisch.</p>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>Vorgang der Titration und Rechnung:</h3></u>
+    </div>
+    <div id="Texte">
+      <p>Als erstes wird der Probelösung ein Indikator dazu gegeben. Danach gibt man langsam immer mehr der Maßlösung dazu bis der Äquivalenzpunkt erreicht ist. Mithilfe des an der Bürette ablesbaren verbrauchten Volumen kann danach der pH-Wert errechnet werden, dieser Vorgang ist auf dem unteren Bild zusehen.</p>
+    </div>
+    <div id="image">
+      <a href="#selfmade"><img src="Berechnung des pH-Wertes bei der Titration.png" alt=""></a>
+    </div>
+    <h3><u>Reflexion</u></h3>
+    <section class="Reflexionen">
+      <div id="Reflexionen">
+      <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+    <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+    <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+    <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+      <!-- this canvas is later used to draw the chart, 
+            if you want to draw several seperate charts you have to pay attention to the IDs -->
+      <!-- in diesem canvas wird das Digramm gezeichnet
+            wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+      <canvas id="evaluation_11" style="border:1px solid"></canvas>
+    </div>
+    
+    <script>
+      var canvasId = "evaluation_11";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+      var chartTitle = "Kapitel 1";  // change accordingly
+      var dataSetValues = [13, 15, 15, 13, 12];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+        // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+      dataSetValues.forEach(function(item) {
+          if (item < 0 || item > 15) {
+            console.log(item);
+            alert("Notenwert falsch: " + item + "!");
+            dataSetValues = [0,0,0,0,0];
+          };
+        }
+      );
+    
+      var chartCanvas = document.getElementById(canvasId);  // don't change this
+      var chartData = {
+        labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+        datasets: [
+          {
+          label: chartTitle,  // keep this
+          backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+          data: dataSetValues  // keep this
+          }, 
+        ]
+      };
+    
+      var radarChart = new Chart(chartCanvas, {
+        type: 'radar',  // keep this
+        data: chartData,
+        options: {
+            layout: {
+              padding: 10
+            },
+            title: {
+                display: true,
+                text: 'Reflexion:Titration'  // change this title as you like it
+            },
+            scale: {
+                angleLines: {
+                    display: true
+                },
+                ticks: {
+                    min: 0,
+                    max: 15,
+                    stepSize: 2,
+                }
+            },
+            responsive: true,  // keep this
+            maintainAspectRatio: false  // keep this
+        }
+      });
+    </script>
+    </class>
+    </section>
+
+    <div id="Texte">
+      <p> Bei diesem Kapitel hatte ich ehrlich gesagt zuerst etwas mehr Problem mit der Rechnung und habe deshalb auch von der Gruppenarbeit provitiert. Den Vorgang an sich habe ich gut verstanden und die Vorgegebene Zeit war ausreichend, jedoch würde ich mir für die Zukunft nochmal vornehmen das ich die Titration auf jedenfall nochmal wiederholen werde. An sich ist es ja nicht all zu schwer wenn man die Formel hat, dann muss man nur die entrsprechenden Werte eintragen, also die Menge die der Probelösung, der Verbrauch der Maßlösung und den Mol pro Gramm. Die Zeit habe ich sinnvoll genutzt und durch das Experiment, welches wir gemacht haben, bei dem wir auch ein Protokoll anfertigen mussten wurde das Thema nocheinmal zusätzlich vertieft. </p>
+    </div>
+
+    <hr>
+
+    <h2>Stahl und Eisen</h2>
+
+    <div id="Teilüberschriften">
+      <u><h3>Unterschiede:</h3></u>
+    </div>
+    <table border="3" style="width: 100%;">
+    <tr>
+      <td><b>Eisen</b></td>
+      <td><b>Stahl</b></td>
+    </tr>
+    <tr>
+      <td>weiches und reaktionsfreudiges Metall</td>
+      <td>Eisenwerkstoff mit maximal 2% Kohlenstoffanteil</td>
+    </tr>
+    <tr>
+      <td>Schmelzpunkt:1.538 °C</td>
+      <td>sehr fest bei Raumtemperatur</td>
+    </tr>
+    <tr>
+      <td>Siedepunkt:2.862°C</td>
+      <td>Umformen in Warmen und Kaltem Zustand möglich</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>kann geschmiedet, gebogen, gewalzt und gezogen werden</td>
+    </tr>
+ </table>
+
+
+  <h3>Gewinnung von Roheisen aus Erzen</h3>
+
+  <div id="Teilüberschriften">
+    <u><h3>1.Vorbereitung für den Hochofen:</h3></u>
+  </div>
+  <div id="Texte">
+    <li>gewonnen aus Eisenerz</li>
+    <li>grobe Erze müssen erst gebrochen, gemahlen oder gesiebt werden (Erzvorbereitet)</li>
+    <li>Feinerz wird stückig gemacht durch Sinterung und Pelletierung</li>
+    <ol> → bei Sintierung werden Erzkörner zusammengeschmolzen (gesintert)</ol>
+    <ol> → beim Pelletiren mit der Hilfe von Bindemitteln und Wasser Mischung erzeugt, Pellets erst geformt, danach gebrannt</ol>
+ </div>
+
+ <div id="Teilüberschriften">
+  <u><h3>2.Eisenerzeugung im Hochofen:</h3></u>
+</div>
+<div id="Texte">
+  <li>Koks und Erz abwechselnd hineingeben</li>
+  <li>Im unteren Bereich wird Erz plastisch, Temperatur aufrecht gehalten mit Prozessgas (Kohlenstoffmonoxid/Stickoxid)</li>
+  <li>Prozessgas entsteht durch Heißluft (900-1300C°), wodurch der Sauerstoff verbrennt und durch Koks zu Kohlenstoffmonoxid wird</li>
+  <li>Eisenoxide werden geschmolzen es kommt zu Redoxreaktion</li>
+  <li>Reduktion des Eisenoxids der oxidischen Eisenerze und des Kohlenstoffes</li>
+  <li>Eisenoxide reagieren mit Kohlenstoffmonoxid oder Wasserstoff, bis Eisen entsteht </li>
+  <li>bei Temperaturzone 500-900°C indirekte Reduktion</li>
+</div>
+
+<div id="Teilüberschriften">
+  <u><h3>Redox-Reaktion:</h3></u>
+</div>
+<div id="Texte">
+  <p>Bei einer Redox-Reaktion, gibt ein Stoff sein Sauerstoff -Atome ab und ein anderer nimmt diese auf. Dieses Verfahren des <b>abgebens von Sauerstoff</b> während einer Reaktion, nennt man <b>Reduktion</b>. Das <b>Aufnehmen von Sauerstoff</b> während einer Reaktion nennt man <b>Oxidation</b>. Bei der Herstellung von Stahl, gibt das Eisenoxid sein Sauerstoff so lange an die Kohlenstoff-Atome ab bis es zu Eisen wird. Dabei ist <b>Eisenoxid</b> der Stoff bei dem die <b>Reduktion</b> stattfindet und <b>Kohlenstoff</b> (wird zu Kohlenstoffdioxid) der Stoff der <b>Oxidiert</b>. Dieser Vorgang ist auf dem unteren Bild, als Reaktionsgleichung zu erkennen.</p>
+</div>
+<div id="image">
+  <a href="https://th.bing.com/th/id/R.0c4d8f26007f5b87088532c3b0566403?rik=07nBC7XOhG4M1A&riu=http%3a%2f%2f3.bp.blogspot.com%2f-4okIybGdpQM%2fUrRM7wCj9aI%2fAAAAAAAAD0o%2ftJE_kIh9eiU%2fs1600%2fRedox2-16.png&ehk=asUXmORvLladv0eR1AExmmhgz3rGU5n3Kq%2bByBD38uk%3d&risl=&pid=ImgRaw&r=0"><img src="Reaktionsgleichung Redoxreaktion Eisenherstellung.png" alt=""></a>
+</div>
+
+<div id="Teilüberschriften">
+  <u><h3>Herstellung von Eisen mit Wasserstoff:</h3></u>
+</div>
+<div id="Texte">
+  <p>Bei der Eisengewinnung mit Wasserstoff ist das Verfahren an sich das gleiche, nur das diesmal Wasserstoff anstatt Kohlenstoff oxidiert. Bei dem <b>Eisenoxid</b> findet wieder eine <b>Reduktion</b> statt und bei dem <b>Wasserstoff</b> kommt es zu einer <b>Oxidation</b>. Also nimmt der Wasserstoff den Sauerstoff auf (Oxidation) und das Eisenoxid gibt ihn ab (Reduktion). Die Reaktionsgleichung dazu ist auf dem unteren Bild zu sehen. Falls Fragen kommen sollten, im gegensatz zu dem oberen Bild wurde Kohlenstoff lediglich durch Wasserstoff ausgetauscht, nur das Verhältnis ist anders. </p>
+</div>
+<div id="image">
+  <a href="#selfmade"><img src="Reaktionsgleichung Herstellung von Eisen mit Wasserstoff.png" alt=""></a>
+</div>
+
+<div id="Teilüberschriften">
+  <u><h3>kovalente und ionische Bindungen Tabelle:</h3></u>
+</div>
+
+  <table  border="3" style="width: 100%;">
+  <tr>
+    <td><b>kovalente Bindungen</b></td>
+    <td><b>Metallbindungen</b></td>
+  </tr>
+  <tr>
+    <td>Bindung zu den Atomen</td>
+    <td>Elektronen könne sich frei bewegen</td>
+  </tr>
+  <tr>
+    <td>Elektronenpaarbindungen</td>
+    <td>frei Valenzelektronen (Elktronengas)</td>
+  </tr>
+  <tr>
+    <td>Valenzelektronen (e- in äußerster Schale) werden geteilt zu den Atomen</td>
+    <td>Metallrümpfe (Fe+ )</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>durch die ständige Bewegung der Elektronen entsteht Elektronische Leitfähigkeit</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Teilchen verschieben sich, stoßen sich aber nicht voneinander ab durch Elektronengas </td>
+  </tr>
+  </table>
+
+  <div id="Teilüberschriften">
+    <u><h3>kovalente und ionische Bindungen Bild:</h3></u>
+  </div>
+  <div id="image">
+    <a href="#selfmade"><img src="Tabelle kovalente und ionische Bindungen.png" alt=""></a>
+  </div>
+
+  <h3><u>Reflexion</u></h3>
+
+  <section class="Reflexionen">
+    <div id="Reflexionen">
+    <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+  
+  <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+  <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+  <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+    <!-- this canvas is later used to draw the chart, 
+          if you want to draw several seperate charts you have to pay attention to the IDs -->
+    <!-- in diesem canvas wird das Digramm gezeichnet
+          wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+    <canvas id="evaluation_14" style="border:1px solid"></canvas>
+  </div>
+  
+  <script>
+    var canvasId = "evaluation_14";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+    var chartTitle = "Kapitel 1";  // change accordingly
+    var dataSetValues = [15, 10, 15, 13, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+  
+      // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+    dataSetValues.forEach(function(item) {
+        if (item < 0 || item > 15) {
+          console.log(item);
+          alert("Notenwert falsch: " + item + "!");
+          dataSetValues = [0,0,0,0,0];
+        };
+      }
+    );
+  
+    var chartCanvas = document.getElementById(canvasId);  // don't change this
+    var chartData = {
+      labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+      datasets: [
+        {
+        label: chartTitle,  // keep this
+        backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+        data: dataSetValues  // keep this
+        }, 
+      ]
+    };
+  
+    var radarChart = new Chart(chartCanvas, {
+      type: 'radar',  // keep this
+      data: chartData,
+      options: {
+          layout: {
+            padding: 10
+          },
+          title: {
+              display: true,
+              text: 'Reflexion:Eisen und Stahl'  // change this title as you like it
+          },
+          scale: {
+              angleLines: {
+                  display: true
+              },
+              ticks: {
+                  min: 0,
+                  max: 15,
+                  stepSize: 2,
+              }
+          },
+          responsive: true,  // keep this
+          maintainAspectRatio: false  // keep this
+      }
+    });
+  </script>
+  </class>
+  </section>
+
+  <div id="Texte">
+    <p> Bei diesem letzten Kapitel habe ich alles sehr gut verstanden und auch effizient gearbeitet. Meist habe ich alleine gearbeitet und eigentlich fast gar nicht in einer Gruppe. In diesem Kapitel habe ich versucht etwas mehr auf den optischen Teil im html einzugehen und dort etwas kreativer zu werden, allerdings hatte ich gerade bei der Tabelle einige Schwierigkeiten. Erst habe ich versucht eine id anzuwenden, doch das hat leider nicht funktioniert, warum kann ich so auch nicht sagen, die Tabelle sowie die Div-Datei habe ich auch beendet. Das Kapitel fand ich sehr interessant, weil es zudem auch aktuell ist und auch Aspekte wie erneuerbare Energie einbezieht.  </p>
+  </div>
+
+  <hr>
+
+  <h2>abschließende Reflexion</h2>
+
+  <section class="Reflexionen">
+    <div id="Reflexionen">
+    <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+  
+  <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+  <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+  <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+    <!-- this canvas is later used to draw the chart, 
+          if you want to draw several seperate charts you have to pay attention to the IDs -->
+    <!-- in diesem canvas wird das Digramm gezeichnet
+          wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+    <canvas id="evaluation_15" style="border:1px solid"></canvas>
+  </div>
+  
+  <script>
+    var canvasId = "evaluation_15";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+    var chartTitle = "Kapitel 1";  // change accordingly
+    var dataSetValues = [15, 12, 15, 13, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+  
+      // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+    dataSetValues.forEach(function(item) {
+        if (item < 0 || item > 15) {
+          console.log(item);
+          alert("Notenwert falsch: " + item + "!");
+          dataSetValues = [0,0,0,0,0];
+        };
+      }
+    );
+  
+    var chartCanvas = document.getElementById(canvasId);  // don't change this
+    var chartData = {
+      labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+      datasets: [
+        {
+        label: chartTitle,  // keep this
+        backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+        data: dataSetValues  // keep this
+        }, 
+      ]
+    };
+  
+    var radarChart = new Chart(chartCanvas, {
+      type: 'radar',  // keep this
+      data: chartData,
+      options: {
+          layout: {
+            padding: 10
+          },
+          title: {
+              display: true,
+              text: 'Reflexion: Portfolio'  // change this title as you like it
+          },
+          scale: {
+              angleLines: {
+                  display: true
+              },
+              ticks: {
+                  min: 0,
+                  max: 15,
+                  stepSize: 2,
+              }
+          },
+          responsive: true,  // keep this
+          maintainAspectRatio: false  // keep this
+      }
+    });
+  </script>
+  </class>
+  </section>
+
+  <div id="Texte">
+    <p> Nun ist wieder ein halbes Jahr vergangen und dies ist nun schon das zweite html Portfolio, welches ich angefertigt habe. Nach dem ersten dachte ich, dass ich erstmal bei html nicht mehr so schnell etwas neues erlernen würde, doch das war tatsächlich nicht der Fall. Von Anfang an hat es mich wieder abgeholt und ich hatte wirklich viel Spaß an der Arbeit am Skript. Es ist immer wieder schön zusehen, dass man fertig ist und die ganze Arbeit eines Halben Jahres bewundern kann. Wie ich finde eine sehr gut Form des Unterrichts. Im gegensatz zu anderen Unterrichten ist Chemie immer etwas besonderes was deshalb aber nicht schlechter sein muss wie ich erfahren durfte. In diesm Portfolio habe ich wieder viel Neues gelernt aber auch altes Wissen wieder aufgefrischt. Die Arbeitsweise mit html war beispielsweise in diesem Portfolio viel flüssiger und ging sehr schnell. Anstatt jedes mal die Texte einzeln zu bearbeiten das sie zum Beispiel in der Mitte stehen habe ich einfach eine Div-Datei angelegt (hätte da natürlich auch eher eine Class-Datei verwenden können). Zu dem chemischen Teil ist zu sagen das ich das Thema von Anfang an spannend fand und es durchaus wissenswert war. Auch wenn mich die Reflexion manchmal nerfen und ich sie am liebsten gar nicht erst machen würde, sind sie eigentlich etwas sehr positives da ich mir die Arbeit nocheinmal durch den Kopf gehen lasse und häufig auch meine Fehler wieder erkenne. Zudem ist es ganz schön seine Erfolge, Rückschläge oder andere Erfahrung zu sammeln und diese zu teilen. Abschließend möchte ich sagen das es mir wieder einmal viel Spaß gemacht hat und ich ehrlich gesagt etwas traurig bin das dass Skript jetzt vorbei ist, dennoch bin ich natürlich froh das es fertig ist.</p>
+  </div>
+
+  <hr>
+
+  <h2>Quellen</h2>
+
+  <div id="Teilüberschriften">
+    <u><h3>Wikipedia:</h3></u>
+  </div>
+  <div id="Texte">
+    <li><a href="https://de.wikipedia.org/wiki/Calciumcarbonat">Calciumcarbonat</a></li>
+    <li><a href="https://de.wikipedia.org/wiki/Technischer_Kalkkreislauf">Technischer_Kalkkreislauf</a></li>
+    <li><a href="https://de.wikipedia.org/wiki/Titration">Titration</a></li>
+    <li><a href="https://de.wikipedia.org/wiki/Eisen">Eisen</a></li>
+    <li><a href="https://de.wikipedia.org/wiki/Indikator_(Chemie)">Indikator</a></li>
+    <li><a href="https://de.wikipedia.org/wiki/Saurer_Regen">saurer Regen</a></li>
+    <li><a href="https://de.wikipedia.org/wiki/Zement">Zement</a></li>
+    <li><a href="https://de.wikipedia.org/wiki/Aluminium">Aluminium</a></li>
+    </div>
+
+    <div id="Teilüberschriften">
+      <u><h3>Chemie.de:</h3></u>
+    </div>
+    <div id="Texte">
+      <li><a href="https://www.chemie.de/lexikon/Titration.html">Titration</a></li>
+      <li><a href="https://www.chemie-schule.de/KnowHow/Technischer_Kalkkreislauf">technischer_Kalkkreislauf</a></li>
+      <li><a href="https://www.chemie.de/lexikon/Indikator_%28Chemie%29.html">Indikator</a></li>
+      <li><a href="https://www.chemie.de/lexikon/Eisen.html">Eisen</a></li>
+      <li><a href="https://www.chemie-schule.de/KnowHow/Technischer_Kalkkreislauf">Kalkkreislauf</a></li>
+</div>
+
+<div id="Teilüberschriften">
+  <u><h3>Seilnacht:</h3></u>
+</div>
+<div id="Texte">
+  <li><a href="https://www.seilnacht.com/Lexikon/Titratio.htm">Titration</a></li>
+  <li><a href="https://www.seilnacht.com/Lexikon/schmelzf.html">Schmelzfluss-Elektrolyse</a></li>
+  <li><a href="https://www.seilnacht.com/Chemie/ch_caco3.htm">Calcium-Carbonat</a></li>
+</div>
+
+    
+    
+
+    
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+</html>

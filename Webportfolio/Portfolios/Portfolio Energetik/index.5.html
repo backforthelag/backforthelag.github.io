@@ -1,0 +1,907 @@
+<!DOCTYPE html5>
+
+<html>
+<head>
+<title>Reflexionen Portfolio</title>
+<link rel="stylesheet" href="style2.css">
+<meta name="viewport" content="device-widht, intial-scale=1">
+
+<div id="Top">
+  <div id="Logo-name">Reflexionen Portfolio</div>
+<div id="navigation">
+<div id="Leiste">
+    </div>
+</head>
+</body>
+
+<header>
+    <h2></h2>
+</header>
+
+
+
+
+<section>
+    <nav>
+        
+    <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_04" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_04";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [15, 0, 14, 10, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Verbrennungsenthalpie-Voreuberlegung'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+
+      <hr>
+
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_03" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_03";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [15, 14, 15, 13, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Verbrennungsenthalpie-Experiment'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_02" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_02";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [13, 15, 15, 14, 13];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Verbrennungsenthalpie-Eubungsaufgabe'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_01" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_01";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [15, 4, 15, 14, 14];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Leosungsenthalpie-Voreuberlegungen'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_06" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_06";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [15, 6, 15, 15, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Leosungsenthalpie-Experiment'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_07" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_07";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [15, 13, 15, 15, 15];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Satz von Hess'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_08" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_08";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [13, 13, 12, 13, 14];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Standartbildungsenthalpie'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_09" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_09";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [15, 0, 15, 14, 14];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Reaktionsgeschwindigkeit'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_10" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_10";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [14, 5, 15, 13, 13];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Stechheberversuch'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_11" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_11";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [14, 6, 15, 13, 11];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Massenwirkungsgesetz'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+
+
+      <hr>
+
+
+      <section class="Reflexionen">
+        <div id="Reflexionen">
+        <!-- this line can also go in the <HEAD> of the file // diese Zeile kann man auch in den <HEAD> der Datei schreiben -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>  
+    
+      <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+      <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+      <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+        <!-- this canvas is later used to draw the chart, 
+              if you want to draw several seperate charts you have to pay attention to the IDs -->
+        <!-- in diesem canvas wird das Digramm gezeichnet
+              wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+        <canvas id="evaluation_12" style="border:4px snow"></canvas>
+      </div>
+    
+      <script>
+        var canvasId = "evaluation_12";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+        var chartTitle = "Einscheatzung";  // change accordingly
+        var dataSetValues = [14, 5, 15, 13, 13];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+    
+          // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+        dataSetValues.forEach(function(item) {
+            if (item < 0 || item > 15) {
+              console.log(item);
+              alert("Notenwert falsch: " + item + "!");
+              dataSetValues = [0,0,0,0,0];
+            };
+          }
+        );
+    
+        var chartCanvas = document.getElementById(canvasId);  // don't change this
+        var chartData = {
+          labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+          datasets: [
+            {
+            label: chartTitle,  // keep this
+            backgroundColor: "rgba(0,139,139,0.7)",  // change color and saturation/opacity here
+            data: dataSetValues  // keep this
+            }, 
+          ]
+        };
+    
+        var radarChart = new Chart(chartCanvas, {
+          type: 'radar',  // keep this
+          data: chartData,
+          options: {
+              layout: {
+                padding: 10
+              },
+              title: {
+                  display: true,
+                  text: 'Abschließende Reflexion zum Skript'  // change this title as you like it
+              },
+              scale: {
+                  angleLines: {
+                      display: true
+                  },
+                  ticks: {
+                      min: 0,
+                      max: 15,
+                      stepSize: 2,
+                  }
+              },
+              responsive: true,  // keep this
+              maintainAspectRatio: false  // keep this
+          }
+        });
+      </script>
+      </class>
+    
+
+    </nav>
+    
+
+    <article>
+        <h2><u>Reaktionswärme</u></h2>
+        <div id="Teilüberschriftenlinksklein">Verbrennungsenthalpie-Vorüberlegung:</div>
+        <div id="TexteReflexionen">Bei dieser Aufgabe muss ich ehrlich sagen, dass ich sie erst später bearbeitet habe, deshalb konnte ich die Aufgabenstellung auch ohne Probleme bewähltigen und dadurch die Aufgaben sehr schnell lösen. Dennoch ist das Zeitmanangmaent nicht sehr gut gewesen, da ich sie erst später bearbeitet habe und diese Aufgabe eigentlich als Vorbereitung für das spätere Experiment gedacht ist.</div>
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+        <div id="Teilüberschriftenlinksklein">Verbrennungsenthalpie-Experiment:</div>
+        <div id="TexteReflexionen">Bei dem Experiment mit dem Kalorimeter und der dazugehörigen Rechnung, wieviel Energie in einem Mol Ethanol enthalten sind, wurde in Gruppengearbeitet, jedoch hat jeder ein eigenes Protokoll geschrieben. Das Protokoll ist auf der Navigationsleiste in der Spalte Protokolle zu finden. Bei dem Experiment gab es eigentlich keinerlei Probleme, einzig das es auch bei einem halben Mol Ethanol sehr lange gedauert hat bis dieses vollständig verbrannt war. Bei der späteren erstellung des Protokolls und der Rechenaufgabe hatte ich anfangs ein wenig Schwierigkeiten, dies konnte jedoch mit kurzer Recherche gelöst werden. Das Thema habe ich nach der Rechcerhe zu dem Protokoll deutlich besser verstanden, genauso wie die Rechnung. Dabei würde ich selber sagen das ich sehr konmzentriert und schnell gearbeitet habe, das einzige was es zu kritisieren gab, war der Rechenweg, welcher einige Formalefehler enthielt, jedoch war die Rechnung und das Ergebnis richtig. </div>
+      </br>
+      </br>
+        <div id="Teilüberschriftenlinksklein">Verbrennungsenthalpie-Übungsaufgabe:</div>
+        <div id="TexteReflexionen">Bei dieser Aufgabe, habe ich sehr effizient und schnell gearbeitet, ich habe mich sogar bei der Auswertung betiligt und das auch schriftlich. Als wir die Aufgabe bekommen haben hab ich sie sehr zeitnah erlidigt bekommen und dies hat mir sehr gut geholfen das Thema zu vertiefen. Die Aufgabe war meiner Meinung nach sehr gut und gerade der Bezug zur Realität und zur aktuellen Lage hat das ganze deutlich interessanter gemacht. Dadurch das ich das Thema noch nicht ganz verstanden hatte, konnte ich mit dieser Hausaufgabe mein Verständnis verbessern und so das Thema verstehen. Die Ergebnise haben wir zusammen als Kurs ausgewertet, dabei sind mir einige Formalefehler unterlaufen, diese wurden jedoch sofort korrigiert.  </div>
+      </br>
+      </br>
+      </br>
+        <div id="Teilüberschriftenlinksklein">Lösungsenthalpie-Vorüberlegung:</div>
+        <div id="TexteReflexionen">Anfangs hatte ich bei dieser Aufageb bei dem  2ten Teil Probleme, dies konnte ich dann auch erst bei der Recherche zu dem Lösungsenthalpie-Experiment verbessern. Die Aufgabe ist als wiederholung oder aufrischen des eigentlich vorhandenen Wissens sehr gut, sie hat ein gut in das Thema Lösungsenthalpie eingeleitet und ihre Bearbeitung ist aufjedenfall eine gute Vorbereitung und Hilfestellung. Später konnte ich, wie schon erwähnt mit den Recherchen zu dem Experiment die 2 Aufgabe ausführlich beantworten. Die Aufgaben habe ich selbständig und mit einer guten Zeitplanung erledigt.</div>
+      </br>
+      </br>
+      </br>
+      </br>
+      </br>
+        <div id="Teilüberschriftenlinksklein">Lösungsenthalpie-Experiment:</div>
+        <div id="TexteReflexionen">Das Experiment zu der Lösungsenthalpie, war das erst große Experiment, damit ist nicht das Experiment gemeint, sondern die Recherchen zu dem Protokoll. Für dieses habe ich nähmlich sehr viel Zeit investiert und dabei sehr effektiv gearbeitet. Der Grund warum ich bei diesem Experiment sehr viel Motivation und Arbeit hatte, war das ich in dem ersten Protokoll 12 Notenpunkte hatte und dies galt es nun zu verbessern. Natürlich konnte ich das Thema noch nicht perfekt und war erst teils im Thema eingelesen durch die schwierigkeiten bei der vorherigen Aufgabe, jedoch habe ich deshabl viel Zeit und schließlich auch viel Arbeit aufgewand um dies zu ändern. Dadurch habe ich ein sehr ausführliches Protokoll geschrieben und konnte nicht nur die vorherige Aufgabe lösen, sondern hatte das Thema sehr gut verstanden. Es hat mir sehr geholfen das ich diesmal als Ziel eine bessere Note wollte und das ich mich einfach hingesetzt habe und hart daran gearbeitet habe. Für mich hat sich die Arbeit deffinitiv gelohnt und es hat auch spaß gemacht.  </div>
+      </br>
+        <div id="Teilüberschriftenlinksklein">Satz von Hess:</div>
+        <div id="TexteReflexionen">Das Experiment und Protokoll "Satz von Hess" war meiner Meinung nach ein sehr logisches Thema und dementsprechend schnell zu verstehen, generell würde ich sagen das ich bei diesem Theam nur sehr wenig Zeit investieren musste um dies zu verstehen, im Vergleich zur zum Beispiel der Lösungsenthalpie. Das Thema haben wir auch in dem Kurs besprochen und natürlich verglichen. Bei der Bearbeitung des Protokolls hatte ich keine Schwierigkeiten und dies konnte ich in auch relativ kurzer Zeit entwerfen. Positiv anmerken möchte ich an dieser Stelle das dass Bild der Reaktionsgleichung auf dem Skript (Online:Jonaspews.github.io, besste Seite:)) mir geholfen hat das Thema schnell zu verstehen.</div>
+      </br>
+      </br>
+      </br>
+        <div id="Teilüberschriftenlinksklein">Standartbildungsenthalpie:</div>
+        <div id="TexteReflexionen">Bei dem Kapitel Standartbildu  ngsenthalpie, hatte ich in der letzten Aufgabe Probleme mit der Rechnung bezüglich der Energie, welche bei dem Kalklöschen frei wird. Jedoch konnte ich nach Rücksprache mit meinem Lehrer dieses Problem lösen, der Grund war ein formaler Rechnungsfehler in der Formel. Ich hatte die Edukte mit den Produkten vertauscht und so eine Lösung, welche nicht möglich gewesen wäre. Bei dem Kalklöschen wird Energie abgegeben, deshalb ist sie exotherm, mein Ergebnis war allerdings endotherm, so viel mir der Fehler zum Glück auf. Für das Kapitel habe ich im Verhältniss zu anderen etwas mehr Zeit benötigt und bin wie gesagt erst nach Hilfe meines Lehrers richtig fertig geworden. Durch die Fehlersuche habe ich auch indirekt mein Verständnis verbessert und habe dementsprechend daraus auch eine Art Vorteil gezogen. Die Hilfe meines Lehrers zähle ich zu der Gruppenhilfe mit dazu, vorab hatte ich mit einer anderen Kursteilnehmerin über das Problem gesprochen, welches bei uns beiden vorlag. Ihr habe ich danach natürlich auch das Musterergebnis geschickt und ihr erklärt was wir falsch gemacht hatten. Aus Fehlern lernt man :) </div>
+
+        
+        <div id="Teilüberschriftenlinksklein">Reaktionsgeschwindigkeit:</div>
+        <div id="TexteReflexionen">Dieses Kapitel war das erste des neuen Skipts, über das chemische Gleichgewicht. In diesem Kapitel habe ich viel gerlernt und einen guten Einblick in das neue Skript erhalten, dieses Kapitel ist meiner Meinung nach auch sehr wichtig für die späteren Kapitel, da  es Information beinhaltet die später gerade in Bezug auf das Gleichungssystem einige wichtige Inhalte. Zum Beispiel das verhalten der Konzentration während der Reaktion. Zudem fand ich es sehr interessant das wir die Stoßtheorie behandelt haben, diese eigentliche Grundtheorie der Chemie habe ich erst durch dieses Kapitel kennernengelernt, auch dies ist in Bezug auf das ober Thema von größere Bedeutung, gerade in Bezug auf die Konzentration und die daurch erhöhten Zusammenstöße der Teilchen (bei hoher Konzentration des Eduktes). Dieses Kapitel habe ich in Einzelarbeit und in mittlerer Zeit abgeschlossen. Meine Arbeitsweise würde ich als ganz gut bezeichnen, da ich ziemlich gut vorran gekommen bin. </div>
+      
+        <div id="Teilüberschriftenlinksklein">Stechheberversuch:</div>
+        <div id="TexteReflexionen">Der Stechhebrversuch ist ein eher kurzes Kapitel gewesen das wir auch zudammen im Unterricht besprochen hatte. Jedoch zeigt es ein logische Folgerung, die das chemische Gleichgewicht beinhaltet. Wenn man aus einem Glas gleich viel herraus nimmt und danach das gleiche wieder hineinfüllt, dann ist das Volumen immer noch das gleiche, dies ändert sich nur wenn entweder mehr oder weniger weggenommen oder zu wenig oder zu viel wiedergegeben wird. Ein für das Gleichgewicht kurzes aber dennoch wichtiges Thema. Das wir es kurz im Unterricht durchgegangen sind, hat mir dabei geholfen dieses Kapitel zu bearbeiten und es auch zu verstehen. Wenn ich ehrlich bin dann habe ich immmer ein etwas schlechtes Gefühl wenn ich in einem Skript nicht viel geschrieben oder es einfach nicht viel Inhalt gibt, genau dieses Problem habe ich bei diesem Kapitel, das Gefühl das etwas fehlt aber man kann es nicht genau sagen, weil man eigentlich alles aufgeschrieben hat. Normalerweise versuche ich immer noch etwas zusatz Informationen in den Kapiteln zu verarbeiten, sodass man immer noch etwas mehr aus ihn rausnimmt oder sie so besser verstehen kann. Das Kaiptel habe ich in Gruppen- und Einzelarbeit bearbeitet. Die Kernaussage des Experimentes habe ich dabei auch verstanden. </div>
+    </br>
+        <div id="Teilüberschriftenlinksklein">Massenwirkungsgwesetz:</div>
+        <div id="TexteReflexionen">Das Kapitel Massenwirkungsgesetz war meiner Meinung nach das bisher schwerste Themer der beiden Skripte. Das Allgemien Prinzip des MWG habe ich dabei  verstanden und auch das Rechnen im groben Aufbau, dabei hat mir das arbeiten am Skript und vorallem selbständige lernen geholfen, dennoch wünsche ich mir für die Zukunft das wir dieses Kapitel nochmal im Unterricht etwas durchnehmen können und auch das Gleichgewicht bei einer Reaktion ausrechnen können, dabei wäre es auch gut wenn wir das einmal für eine zum Beispiel mit einer Lösung und die andere als Gasreaktion, dies könnte helfen einige Missverständnisse zu beseitigen. Allgemein wäre ein Vergleich im Unterricht nocheinmal sehr gut da man so alles nocheinmal durchgeht und vorhandene Probleme gleich lösen kann. Zwar habe ich in diesem Kapitel sehr schnell und auch sehr sorgfälltig gearbeitet, doch trotzdem habe ich nicht alles zu 100% verstanden, weshalb ich mir dafür nur 11 Punkte gebe, auch wenn ich ein guten Einblick bekommen habe ist es mein Ziel dieses Thema vollständig zu verstehen.</div>
+
+        <div id="Teilüberschriftenlinksklein">Abschließende Reflexion zum Skript:</div>
+        <div id="TexteReflexionen">Und nun ist wiedereinmal der Moment in dem eine Arbeit am Portfolio endet. Ich fand das ich in diesem Jahr wieder sehr viel gelernt habe ich Chemieunterricht und dies nicht nur bezogen auf Chemie sondern auch auf das Html, ich habe mich dazu entschieden extra für diese Reflexionen ein zweites Portfolio zu entwerfen, das habe ich sogar ganz freiwillig gemacht. Das Skript ist zwar oft anstrengend und sehr Zeitraubend, dennoch finde ich es immer wieder sehr beeindrucken und auch sehr hilfreich für das spätere Leben. Meiner Meinung nach ist die Idee mit dem Html eine der Besten die ich bisher in meiner Schulzeit kennengelernt habe, gerade in der heutigen Zeit finde ich es eine super Idee, Schüler oder Eltern die sagen das es eine schlechte Idee ist und der Meinung sind das man diese Art des Skripts verbietne soll kann ich nicht verstehen. Wenn man heutzutage schon die ganzen Digitalen Medien verwändet, sollte man auch ein wenig Interesese für deren Hintergrund haben. Zurück zum Skript. In Bezug auf den chemischen Hintergrund fand ich das Thema zwar etwas thematische aber dennoch nicht uninteressant. Gerade das einbinden von zahlreichen Experimenten ist eine gute Idee die für vielfallt sorgt. Was den Zeitaufwand angeht hatte ich in diesem Jahr weniger Zeit in Chemie investiet, das Problem was ich hatte war das während der regulären Schulzeit meist weniger Zeit für das Skript hatte, weil es einen längere Abgabefrist hat und man es dadurch immer automatisch etwas nach hinten verschiebt. Dennoch habe ich dieses Jahr schon sehr füh angefangen mit dem Skript, schon in den Sommerferien hatte ich die Grundstrucktur für das Html gebaut und schließlich hatte ich mich jetzt kurz vor dem Ende dafür entschieden noch schnell eine neue Html für die Reflexionen einzurichten. Es is eine Art Motivation, in jedem neuen Skript etwas Neues zuverwenden und so eine optisch ansprechende oder teschnich bessere Funktion zu bekommen. Diesmal habe ich es leider nicht ganz so gut geschafft alle Formeln direkt im Html zuschreiben, bei einigen ist es mir gut gelungen und ich finde es optisch auch deutlich passender, gerade mit dem neuen Hintergrund des Portfolios. Auch als Vorbereitung für die Klausur hat mir das Skript geholfen und als Vorbereitung konnte ich zum Beispiel auch den Test verwenden, denn ich tatsächlich komplett durchgerechnet habe, was eine gute  Vorbereitung für die Klasur war. Für die Zukunft freue ich mich auch auf das neue Thema und bin gespannt was es bringt. Generell fand ich es auch gut Bilder aus dem Online Skript zu verwenden sowie die ständige Verfügbarkeit, einzig und allein das Arbeiten in der Schule war durch Wlanprobleme etwas schwer und deshalb etwas komnplizierter. Dabei hat mir aber sehr gut gefallen das ich bei diesem Skript deutlich öffter mit anderen Kursteilnehmern verglichen habe und oft auch anderen Helfen konnte, egal ob mit dem chemiethema oder dem Htmlwissen. Ich hoffe ich konnte Ihnen die Arbeit eines halben Jahres in diesem Portfolio etwas anschaulich und inhaltlich sehr detailiert darstellen. Hoffentlich haben sie sich die Reflexionen auf einem größeren Bildschirm angesehen, denn nur dann können sie eines meiner neuen Feutures sehen, leider ist es mir auch bei diesem Skript nicht gelungen, die verschiedenen Themen zu verlinken und so gleich von dem Anfang der Seite zu einem Thema zu gelangen. Dennoch ahbe ich die Navigationleiste, sowie die zersteilung der Htmlseite und noch einige weiter Verbesserungen vornehmmen können zum Vorjahr. Ihnen noch schöne Feiertage. </div>
+
+        </section>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+      
+
+
